@@ -1,0 +1,6 @@
+[
+  {"label": "K09_dt0.039", "csv": "../result/K09_dt0.039.csv", "dt_max_s": 0.039},
+  {"label": "K17_dt0.039", "csv": "../result/K17_dt0.039.csv", "dt_max_s": 0.039},
+  {"label": "K49_dt0.039", "csv": "../result/K49_dt0.039.csv", "dt_max_s": 0.039},
+  {"label": "K49_dt0.0078", "csv": "../result/K49_dt0.0078.csv", "dt_max_s": 0.0078}
+]

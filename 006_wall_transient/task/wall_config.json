@@ -1,0 +1,11 @@
+{
+  "L_m": 0.02,
+  "area_m2": 1.0,
+  "lambda_W_mK": 16.0,
+  "rho_kg_m3": 7800.0,
+  "cp_J_kgK": 500.0,
+  "T0_K": 293.15,
+  "Tb_K": 393.15,
+  "step_time_s": 1.0,
+  "boundary": "dirichlet"
+}
