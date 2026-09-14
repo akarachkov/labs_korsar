@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 Z" fill="#334155"/></marker></defs>
+<rect width="1100" height="560" fill="white"/>
+<g font-family="Arial, sans-serif" fill="#17283c">
+<text x="40" y="40" font-size="25" font-weight="bold">Плоское ребро: HCS1, TYPE=2, COOR=0</text>
+<text x="40" y="72" font-size="17">Продольный перенос тепла: 1 → N. Ширина b = 100 мм направлена за плоскость рисунка.</text>
+<rect x="55" y="110" width="220" height="63" rx="8" fill="#fee2e2" stroke="#b91c1c"/>
+<text x="165" y="136" text-anchor="middle" font-size="19">BHEAT1 · TYPE=1</text>
+<text x="165" y="159" text-anchor="middle" font-size="17">T₀ = 393.15 К</text>
+<rect x="410" y="110" width="535" height="63" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="677" y="136" text-anchor="middle" font-size="19">BHEAT2 · TYPE=3 · воздух</text>
+<text x="677" y="159" text-anchor="middle" font-size="17">α = 3…50 Вт/(м²·К), T₁ = 293.15 К</text>
+<rect x="145" y="235" width="120" height="110" fill="#fecaca" stroke="#334155" stroke-width="2"/>
+<rect x="265" y="235" width="680" height="110" fill="#ffedd5" stroke="#334155" stroke-width="2"/>
+<g stroke="#64748b"><path d="M375 235V345 M485 235V345 M705 235V345 M835 235V345"/></g>
+<g font-size="22" text-anchor="middle"><text x="205" y="285">1</text><text x="320" y="285">2</text><text x="430" y="285">3</text><text x="595" y="285">…</text><text x="770" y="285">N−1</text><text x="890" y="285">N</text></g>
+<g font-size="16" text-anchor="middle"><text x="205" y="315">контакт</text><text x="595" y="315">охлаждаемая часть</text></g>
+<g fill="none" stroke="#334155" stroke-width="2"><path d="M190 173V225" marker-end="url(#arrow)"/><path d="M75 173V375H205V355" marker-end="url(#arrow)"/><path d="M580 173V225" marker-end="url(#arrow)"/><path d="M945 145H1030V375H640V355" marker-end="url(#arrow)"/></g>
+<text x="310" y="221" font-size="18">/1</text><text x="310" y="369" font-size="18">/2</text>
+<path d="M945 235V345" stroke="#17283c" stroke-width="5"/>
+<text x="962" y="270" font-size="16">торец:</text><text x="962" y="295" font-size="16">dT/dx = 0</text>
+<path d="M265 392V427 M945 392V427 M265 413H945" fill="none" stroke="#334155" marker-end="url(#arrow)"/>
+<text x="605" y="440" font-size="18" text-anchor="middle">L = 60 мм; ячейки 2:N</text>
+<path d="M145 410H265" stroke="#334155" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="205" y="440" text-anchor="middle" font-size="16">ℓc = 1 мм</text>
+<path d="M265 460H990" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="265" y="485" font-size="17" text-anchor="middle">x = 0</text><text x="945" y="485" font-size="17" text-anchor="middle">x = L</text><text x="1000" y="466" font-size="19">x</text>
+<path d="M115 235V345" stroke="#334155" marker-end="url(#arrow)"/><text x="94" y="297" font-size="18">y</text>
+<text x="40" y="530" font-size="17">δ = 2 мм; λ = 50 Вт/(м·К). Размеры на схеме условные; контакт не входит в охлаждаемую площадь.</text>
+</g></svg>
