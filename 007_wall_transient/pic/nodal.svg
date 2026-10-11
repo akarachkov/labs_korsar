@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1100"
+   height="520"
+   viewBox="0 0 1100 520"
+   version="1.1"
+   id="svg19"
+   sodipodi:docname="nodal.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview19"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4865385"
+     inkscape:cx="549.93532"
+     inkscape:cy="260"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="815"
+     inkscape:window-y="2151"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg19" />
+  <title
+     id="title1">Лабораторная работа 006: плоская стенка HCS с двумя BHEAT</title>
+  <desc
+     id="desc1">Слева температура скачком возрастает от T0 до Tb. Справа температура T0 для варианта A или теплоизоляция для варианта B. Узлы HCS расположены по толщине от нуля до L.</desc>
+  <defs
+     id="defs1">
+    <marker
+       id="arrow"
+       markerWidth="9"
+       markerHeight="9"
+       refX="8"
+       refY="4.5"
+       orient="auto">
+      <path
+         d="M0 0L9 4.5L0 9Z"
+         fill="#0e7490"
+         id="path1" />
+    </marker>
+  </defs>
+  <rect
+     width="1100"
+     height="520"
+     fill="#f8fafc"
+     id="rect1" />
+  <text
+     x="40"
+     y="42"
+     font-size="26px"
+     font-weight="bold"
+     id="text1"
+     style="font-family:Arial, sans-serif;fill:#183141">007 · Нестационарная теплопроводность</text>
+  <text
+     x="40"
+     y="74"
+     font-size="18px"
+     id="text2"
+     style="font-family:Arial, sans-serif;fill:#183141">Одна плоская HCS · две поверхности · разбиение по толщине</text>
+  <rect
+     x="370"
+     y="130"
+     width="350"
+     height="200"
+     fill="#fef3c7"
+     stroke="#b45309"
+     stroke-width="2"
+     id="rect2"
+     style="font-family:Arial, sans-serif" />
+  <g
+     stroke="#b45309"
+     stroke-dasharray="5, 5"
+     id="g2"
+     style="font-family:Arial, sans-serif;fill:#183141">
+    <path
+       d="M 414,130 V 330 M 458,130 V 330 M 502,130 V 330 M 546,130 V 330 M 590,130 V 330 M 634,130 V 330 M 678,130 V 330"
+       id="path2" />
+  </g>
+  <rect
+     x="40"
+     y="182"
+     width="235"
+     height="112"
+     rx="10"
+     fill="#fee2e2"
+     stroke="#b91c1c"
+     stroke-width="2"
+     id="rect3"
+     style="font-family:Arial, sans-serif" />
+  <rect
+     x="805"
+     y="160"
+     width="255"
+     height="158"
+     rx="10"
+     fill="#e0f2fe"
+     stroke="#0369a1"
+     stroke-width="2"
+     id="rect4"
+     style="font-family:Arial, sans-serif" />
+  <g
+     font-size="19px"
+     text-anchor="middle"
+     id="g14"
+     style="font-family:Arial, sans-serif;fill:#183141">
+    <text
+       x="157"
+       y="212"
+       font-weight="bold"
+       id="text4">BHEAT1 · TYPE=1</text>
+    <text
+       x="157"
+       y="243"
+       id="text5">T₀ → Tb при τ = τₛ</text>
+    <text
+       x="157"
+       y="272"
+       id="text6">Температурный скачок</text>
+    <text
+       x="933"
+       y="190"
+       font-weight="bold"
+       id="text7">BHEAT2</text>
+    <text
+       x="933"
+       y="224"
+       id="text8">A: TYPE=1, T = T₀</text>
+    <text
+       x="933"
+       y="260"
+       id="text9">B: TYPE=2, q = 0</text>
+    <text
+       x="933"
+       y="294"
+       id="text10">Теплоизоляция</text>
+    <text
+       x="546"
+       y="116"
+       font-weight="bold"
+       id="text11">HCS1 · COOR=0</text>
+    <rect
+       x="445"
+       y="208"
+       width="202"
+       height="45"
+       fill="#fef3c7"
+       stroke="none"
+       id="rect11" />
+    <text
+       x="546"
+       y="237"
+       id="text12">N=1 · KL=1 · K узлов</text>
+    <text
+       x="370"
+       y="357"
+       id="text13">/1 · x=0</text>
+    <text
+       x="720"
+       y="357"
+       id="text14">/2 · x=L</text>
+  </g>
+  <g
+     stroke="#0e7490"
+     stroke-width="3"
+     fill="none"
+     marker-end="url(#arrow)"
+     id="g16"
+     style="font-family:Arial, sans-serif">
+    <path
+       d="m 275,238 h 90"
+       id="path14" />
+    <path
+       d="m 725,238 h 75"
+       id="path15" />
+    <path
+       d="M 370,392 H 720"
+       id="path16" />
+  </g>
+  <text
+     x="286"
+     y="218"
+     font-size="18px"
+     id="text16"
+     style="font-family:Arial, sans-serif;fill:#183141">q₀</text>
+  <text
+     x="749"
+     y="218"
+     font-size="18px"
+     id="text17"
+     style="font-family:Arial, sans-serif;fill:#183141">qL</text>
+  <text
+     x="447"
+     y="420"
+     font-size="18px"
+     id="text18"
+     style="font-family:Arial, sans-serif;fill:#183141">+x · полная толщина L</text>
+  <rect
+     x="40"
+     y="448"
+     width="1020"
+     height="46"
+     rx="8"
+     fill="#e2e8f0"
+     id="rect18"
+     style="font-family:Arial, sans-serif" />
+  <text
+     x="60"
+     y="477"
+     font-size="18px"
+     id="text19"
+     style="font-family:Arial, sans-serif;fill:#183141">До скачка: T(x) = T₀. Потоки после скачка восстанавливаются по градиенту узловых температур.</text>
+</svg>

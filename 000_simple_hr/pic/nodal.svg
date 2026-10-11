@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   sodipodi:docname="nodal.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.7901515"
+     inkscape:cx="227.58621"
+     inkscape:cy="122.39479"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="m 66.872732,26.640828 v -2.69518"
+       style="fill:#e30016;fill-rule:evenodd;stroke:#1b1918;stroke-width:0.846595;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+       id="path1" />
+    <path
+       d="M 86.777972,21.250528 H 31.788505 v 5.3903 h 54.989467 z"
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#1b1918;stroke-width:0.423297;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+       id="path2" />
+    <text
+       x="34.506622"
+       y="24.954447"
+       id="text2"
+       style="font-size:4.23333px;stroke-width:0.352777"><tspan
+         font-family="Arial"
+         font-size="3.17499px"
+         fill="#1b1918"
+         id="tspan2"
+         style="stroke-width:0.352777">1</tspan></text>
+    <path
+       d="m 38.327125,20.603498 v 1.70985 q 0,1.2653 1.265306,1.2653 h 6.731483 q 1.265271,0 1.265271,-1.2653 v -1.70985 q 0,-1.26527 -1.265271,-1.26527 h -6.731483 q -1.265306,0 -1.265306,1.26527 z"
+       style="fill:#f5b1b5;fill-rule:evenodd;stroke:#1b1918;stroke-width:0.253894;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+       id="path3" />
+    <text
+       x="40.193108"
+       y="22.616831"
+       id="text3"
+       style="font-size:4.23333px;stroke-width:0.352777"><tspan
+         font-family="Arial"
+         font-size="3.17499px"
+         fill="#1b1918"
+         id="tspan3"
+         style="stroke-width:0.352777">CH1</tspan></text>
+    <text
+       x="77.152336"
+       y="25.112741"
+       id="text7"
+       style="font-size:4.23333px;stroke-width:0.352777"><tspan
+         font-family="Arial"
+         font-size="3.17499px"
+         fill="#1b1918"
+         id="tspan7"
+         style="stroke-width:0.352777">2</tspan></text>
+    <path
+       d="m 18.822637,18.500668 a 5.4449751,5.4449751 0 0 1 5.44494,5.44498 5.4449751,5.4449751 0 1 1 -5.44494,-5.44498 z"
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#1b1918;stroke-width:0.199989;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+       id="path7" />
+    <path
+       d="m 11.380485,23.457148 v 0.97695 q 0,1.59427 1.59427,1.59427 h 13.515354 q 1.594235,0 1.594235,-1.59427 v -0.97695 q 0,-1.59423 -1.594235,-1.59423 H 12.974755 q -1.59427,0 -1.59427,1.59423 z"
+       style="fill:#f5b1b5;fill-rule:evenodd;stroke:#1b1918;stroke-width:0.0761999;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+       id="path8" />
+    <text
+       x="12.550647"
+       y="25.052158"
+       id="text9"
+       style="font-size:4.23333px;stroke-width:0.352777"><tspan
+         font-family="Arial"
+         font-size="3.35138px"
+         fill="#1b1918"
+         id="tspan8"
+         style="stroke-width:0.352777">BVOL</tspan><tspan
+         font-family="Arial"
+         font-size="3.35138px"
+         fill="#1b1918"
+         id="tspan9"
+         style="stroke-width:0.352777">_T1</tspan></text>
+    <path
+       d="M 31.78854,23.945648 H 28.084344"
+       style="fill:#f07c00;fill-rule:evenodd;stroke:#f07c00;stroke-width:0.423297;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+       id="path9" />
+    <path
+       d="m 99.54089,18.40584 a 5.4449751,5.4449751 0 0 1 5.44494,5.44498 5.4449751,5.4449751 0 1 1 -5.44494,-5.44498 z"
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#1b1918;stroke-width:0.199989;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+       id="path10" />
+    <path
+       d="m 92.098732,23.36232 v 0.97695 q 0,1.59427 1.59424,1.59427 h 13.515388 q 1.59423,0 1.59423,-1.59427 v -0.97695 q 0,-1.59423 -1.59423,-1.59423 H 93.692972 q -1.59424,0 -1.59424,1.59423 z"
+       style="fill:#f5b1b5;fill-rule:evenodd;stroke:#1b1918;stroke-width:0.0761999;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+       id="path11" />
+    <text
+       x="93.079239"
+       y="24.862503"
+       id="text12"
+       style="font-size:4.23333px;stroke-width:0.352777"><tspan
+         font-family="Arial"
+         font-size="3.35138px"
+         fill="#1b1918"
+         id="tspan11"
+         style="stroke-width:0.352777">BVOL</tspan><tspan
+         font-family="Arial"
+         font-size="3.35138px"
+         fill="#1b1918"
+         id="tspan12"
+         style="stroke-width:0.352777">_T2</tspan></text>
+    <path
+       d="M 92.051288,23.945648 H 86.777932"
+       style="fill:#f07c00;fill-rule:evenodd;stroke:#f07c00;stroke-width:0.290455;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+       id="path12" />
+    <path
+       d="m 59.65782,25.681793 v -5.49609"
+       style="fill:none;stroke:#009035;stroke-width:0.199989;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+       id="path13" />
+    <g
+       id="Layer1000"
+       transform="matrix(0.35277721,0,0,0.35277721,-31.26673,6.4128224)">
+      <path
+         d="M 260.23,60.4056 V 33.6703"
+         style="fill:none;stroke:#1b1918;stroke-width:0.5669;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+         id="path14" />
+      <path
+         d="m 254.9122,61.9231 h 5.6537 q 0.3016,0 0.3016,-0.3017 V 32.455 q 0,-0.3017 -0.3016,-0.3017 h -5.6537 q -0.3016,0 -0.3016,0.3017 v 29.1664 q 0,0.3017 0.3016,0.3017 z"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#1b1918;stroke-width:0.5669;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+         id="path15" />
+      <path
+         d="m 254.9122,61.9231 h 5.6537 q 0.3016,0 0.3016,-0.3016 v -7.8293 q 0,-0.3016 -0.3016,-0.3016 h -5.6537 q -0.3016,0 -0.3016,0.3016 v 7.8293 q 0,0.3016 0.3016,0.3016 z"
+         style="fill:#1b1918;fill-rule:evenodd;stroke:#1b1918;stroke-width:0.5669;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+         id="path16" />
+      <path
+         d="m 254.9122,40.586 h 5.6537 q 0.3016,0 0.3016,-0.3017 v -7.8292 q 0,-0.3017 -0.3016,-0.3017 h -5.6537 q -0.3016,0 -0.3016,0.3017 v 7.8292 q 0,0.3017 0.3016,0.3017 z"
+         style="fill:#1b1918;fill-rule:evenodd;stroke:#1b1918;stroke-width:0.5669;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+         id="path17" />
+    </g>
+    <path
+       d="m 55.18891,29.830883 v 1.72437 q 0,1.27607 1.27603,1.27607 h 6.78881 q 1.27603,0 1.27603,-1.27607 v -1.72437 q 0,-1.27607 -1.27603,-1.27607 h -6.78881 q -1.27603,0 -1.27603,1.27607 z"
+       style="fill:#f5b1b5;fill-rule:evenodd;stroke:#1b1918;stroke-width:0.253894;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+       id="path18" />
+    <text
+       x="57.143433"
+       y="31.823469"
+       id="text18"
+       style="font-size:4.23333px;stroke-width:0.352777"><tspan
+         font-family="Arial"
+         font-size="3.17499px"
+         fill="#1b1918"
+         id="tspan18"
+         style="stroke-width:0.352777">LR1</tspan></text>
+  </g>
+</svg>

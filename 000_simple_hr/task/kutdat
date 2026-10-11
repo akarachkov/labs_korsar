@@ -1,0 +1,58 @@
+FORMAT = 4;
+
+!!bb Переменные, используемые в постпроцессинге
+
+!!eb
+
+MAIN:
+
+BEGIN
+  IF TAU == 0 THEN GOTO A ENDIF
+OUT _TIME.dat    ! таймеры
+!!bb 
+  OUT _sensor_1.dat  !
+  OUT _sensor_2.dat  !
+
+!!eb
+
+  A: END
+
+END
+
+OUTPUT _TIME.dat
+  IF FIRST THEN
+    FIRST = 0;
+    WRITE1 'TAU','DT','max','diag','out','mon','sav';
+  ENDIF
+  WRITE DT,dt_max,dt_diag,dt_out,_monPer,dt_sav;
+
+END
+!!bb OUTPUTs 
+
+OUTPUT _sensor_1.dat
+  IF FIRST THEN
+    FIRST = 0;
+    WRITE1 'TAU','TAU_R','d1','d2','d3','d4','d5','d6','d7','d8',
+      'd9','d10';
+  ENDIF
+  ! моменты
+  WRITE TAU-_tauRest,_sensor(1),_sensor(2),_sensor(3),
+    _sensor(4),_sensor(5),_sensor(6),_sensor(7),
+    _sensor(8),_sensor(9),_sensor(10);
+
+END
+OUTPUT _sensor_2.dat
+  IF FIRST THEN
+    FIRST = 0;
+    WRITE1 'TAU','TAU_R','d11','d12','d13','d14','d15','d16','d17','d18',
+      'd19','d20';
+  ENDIF
+  ! моменты
+  WRITE TAU-_tauRest,
+    _sensor(11),_sensor(12),_sensor(13),_sensor(14),
+    _sensor(15),_sensor(16),_sensor(17),_sensor(18),
+    _sensor(19),_sensor(20);
+
+END
+
+!!eb

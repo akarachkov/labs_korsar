@@ -1,0 +1,7 @@
+ 00001 !!bb Ключи основной процедуры
+ 00002 
+ 00003 ! Ключ
+ 00004 restart = 0;
+ 00005 title = 'vb.036.003';
+ %ers- 1st ten characters of  TITLE are  "VB.036.003"
+       It is not equal to actual version  VD.035.004

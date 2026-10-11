@@ -1,0 +1,32 @@
+ 00001 FORMAT = 5;
+ 00002 N1 = 10;
+ 00003 
+ 00004 BEGIN
+ 00005   OUT RESULT.DAT
+ 00006 END
+ 00007 END
+ --------------------
+ 00004 BEGIN
+ 00005   OUT RESULT.DAT
+ 00006 END
+ --------------------
+ 00007 END
+ 00008 
+ 00009 OUTPUT RESULT.DAT
+ 00010 	IF FIRST THEN
+ 00011 	FIRST = 0;
+ 00012 	WRITE1 'TAU, T_hot, T_cold, Tw1, Tw2, ALW1, ALW2';
+ 00013 	ENDIF
+ 00014 	WRITE T.CH1(1,1:N1), T.CH2(1,1:N1),
+ 00015 	TW.HCS1(1,1:N1), TW.HCS1(2,1:N1),
+ 00016 	ALW.HCS1(1,1:N1), ALW.HCS1(2,1:N1);
+ 00017 END
+  
+ %inf- MAIN proc. Initial value of LOCAL_ERR is 1.000000000E-04
+ %inf- MAIN proc. Initial value of FORMAT is 10
+  
+ Usage of space: Variables (<korres>), Descriptors, Procedures
+ Used   space:           0.12%            0.55%        0.87% 
+  
+  
+ Used space for variables   0.00%

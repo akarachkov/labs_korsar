@@ -1,0 +1,984 @@
+!!bb Ключи основной процедуры
+
+! Ключ                 
+restart = 0;            
+title = 'vb.036.003';
+dt_max = 0.001;         
+dt_out = 0.1;           
+fin_tim = 20;           
+dt_sav = 0;             
+append_res = 1;         
+append_sav = 0;         
+! noption = '2,3,7,10';
+check_only = 0;         
+local_err = 1.0e-4;     
+ngas = 'H2O, N2, O2';   
+dt_diag = dt_out;       
+inf = 1;                
+accel_stat = 0;         
+nwsp_dat='../../nwsp_dat';
+_tauRest = 0.; ! момент рестарта
+_debug = 0; ! вывод отладочной информации
+_diag = 0;  ! режим вывода диагностики
+            ! 0 - нет диагностики
+            ! 1 - краткая
+            ! 2 - расширенная
+_monPer = 5.0;    ! Период вывода диагностики в файл мониторинга
+!!eb
+
+!!bb Общие глобальные переменные
+! Константы
+_t0C = 273.15;
+_tOffset = _t0C;
+_pi = 3.1415927;
+_gg = 9.81;
+_xgAir(1:4) = 0.,0.,0.757,0.243;
+_xgN2(1:4) = 0.,0.,9.999e-1,0.;
+_pAtm = 101.3e+03;
+_tAtm = 20.+_tOffset;
+_tsAtm = WS1P1(1,'P',_pAtm,2);
+_kgs = 98066.5;  ! кгс/см2, Па
+_MPa = 1.e6; ! МПа, Па 
+_kPa = 1.e3; ! МПа, Па
+_MWt = 1.e6; ! МПа, Па
+_kWt = 1.e3; ! МПа, Па
+_atm = 101325.; ! атм, Па
+_bar = 1.e5; ! бар, Па
+_timeMon = 0.;    ! Вспомогательные переменные диагностики
+_timeMonOld = 0.; ! -//-
+! Свойства проводника тепла
+_tlamStal(1:2,1:2) = 
+  273.,   50.
+ ,1000.,  50.;
+_thcStal(1:2,1:2) = 
+  273.,   500.
+ ,1000.,  500.;
+_troStal(1:2,1:2) = 
+  273.,   7800.
+ ,1000.,  7800.;
+
+! Датчики
+_sensor(1:20) = 0.;
+! Режимные и конструктивные параметры 
+
+!!eb
+
+_n0 = 2;
+
+MAIN:
+
+LAYOUT
+CH1/i - BVOL_T1;
+CH1/o - BVOL_T2;
+CH1(2) - LR1;
+END
+! CALLs
+! CALL _BlJun;
+CALL _Ch;
+! CALL _Sc;
+! CALL _Jnb;
+! CALL _Cnt;
+CALL _Bv;
+! CALL _Sm;
+CALL _Lr;
+! CALL _Val;
+! CALL _Hcs;
+! CALL _Qhs;
+! CALL _Col;
+! CALL _Slv;
+! CALL _Tnk;
+! CALL _Bh;
+! CALL _Jn;
+! CALL _Acc;
+! CALL _Mod;
+! CALL _Fu;
+! CALL _Qfl;
+! CALL _Sr;
+! CALL _Tm;
+! CALL _Rad;
+! CALL _Pmp;
+! CALL _Cor;
+
+! SETs
+SET _DtHandle;
+SET _Actions;
+SET _CalcSensor;
+SET _Monitor;
+
+! OUTs
+OUT _Out;
+
+END
+
+!!bb DATAs
+
+! DATA _BlJun   ! общая для всех объектов
+  ! MDL = 'BLJUN';
+  ! ELS = 1;
+  ! TYPE = 0;
+! END
+
+DATA _Ch
+  MDL = 'CH';
+  ELS = 1;
+  IF(NV==1) THEN
+    N = _n0;
+    S = 0.7854*(0.025**2);
+    TYPE  = 0;
+    PR = _pi*0.025;
+    DZ = 1./N;
+    DH = 0.;
+    ROU = 2e-5;
+    P = 1.*_MPa;
+    T(1,1:N) = 20.+_t0C;
+    T(2,1:N) = 20.+_t0C;
+    VOID = 0.;
+    ! XB = ;
+    ! MBW = ;
+    ! SRE(1:2) = ;
+    ! NE = ;
+    ! JIN = ;
+    ! JOU = ;
+    XNG(1,1:N) = _xgAir(1);
+    XNG(2,1:N) = _xgAir(2);
+    XNG(3,1:N) = _xgAir(3);
+    XNG(4,1:N) = _xgAir(4);
+    ! XNF(1,1:N) = ;
+    ! XNF(2,1:N) = ;
+    ! XNF(3,1:N) = ;
+    ! XNF(4,1:N) = ;
+    ! RAV = ;
+  ENDIF
+
+END
+
+! DATA _Sc
+  ! MDL = 'SCH';
+  ! ELS = ;
+  ! IF(NV==1) THEN
+    ! S = ;
+    ! TYPE = ;
+    ! DZ = ;
+    ! DH = ;
+    ! SMIN = ;
+    ! MU = ;
+  ! ENDIF
+! END
+
+! DATA _Jnb
+  ! MDL = 'JUNB';
+  ! ELS = ;
+  ! IF(NV==1) THEN
+    ! S = ;
+    ! DZ = ;
+    ! DH = ;
+    ! SMIN = ;
+    ! MU = ;
+    ! TYPE = ;
+  ! ENDIF
+  
+! END
+
+! DATA _Cnt
+  ! MDL = 'CONT';
+  ! ELS = ;
+  ! IF(NV==1) THEN
+    ! N = ;
+    ! K = ;
+    ! Y = ;
+    ! YZ = ;
+    ! VZX(1:K,1) = ;
+    ! VZX(1:K,2) = ;
+    ! ON = ;
+    ! DS = ;
+    ! TSX = ;
+    ! KP = ;
+    ! KI = ;
+    ! KD = ;
+    ! LY(1:2,1) = ;
+    ! LYZ(1:2,1) = ;
+    ! LDY(1:2,1) = ;
+    ! LXP(1:2,1) = ;
+    ! LXI(1:2,1) = ;
+    ! LXD(1:2,1) = ;
+    ! LXJ(1:2,1) = ;
+    ! LSX(1:2,1) = ;
+  ! ENDIF
+! END
+
+DATA _Bv
+  MDL = 'BVOL_T';
+  ELS = 1,2;
+  IF(NV==1) THEN
+    P = 1.*_MPa;
+    VOID = 0.;
+    T = 20.+_t0C;
+    ! XB = ;
+    XNG = _xgAir;
+    ! XNF = ;
+  ENDIF
+  IF(NV==2) THEN
+    P = 1.*_MPa;
+    VOID = 0.;
+    T = 20.+_t0C;
+    ! XB = ;
+    XNG = _xgAir;
+    ! XNF = ;
+  ENDIF
+END
+
+! DATA _Sm
+  ! MDL = 'SMASS_T';
+  ! ELS = 1;
+  ! IF(NV==1) THEN
+    ! GIN = 0.;
+    ! EHIN = WS2P1(1,'PT',1.*_MPa,20+_t0C,4),WS1P1(2,'P',1.*_MPa,4);
+    ! ! GMOUT = ;
+    ! ! XB = ;
+    ! ! XNG = ;
+    ! ! XNF = ;
+  ! ENDIF
+! END
+
+DATA _Lr
+  MDL = 'LR';
+  ELS = 1;
+  IF(NV==1) THEN
+    CSI1 = 7.;
+    CSI2 = 7.;
+    ! DHOLE = ;
+    ! SHOLE = ;
+  ENDIF
+END
+
+! DATA _Val
+  ! MDL = 'VAL';
+  ! ELS = ;
+  ! IF(NV==1) THEN
+    ! K = ;
+    ! F(1:K,1) =;
+    ! F(1:K,2) = ;
+    ! F(1:K,3) = ;
+    ! CSI1 = ;
+    ! CSI2 = ;
+    ! S = ;
+    ! LS = ;
+  ! ENDIF
+! END
+
+! DATA _Hcs
+  ! MDL = 'HCS';
+  ! ELS = 1;
+  ! IF(NV==1) THEN
+    ! N = _n0;
+    ! KL = 1;
+    ! K  = 3;
+    ! TYPE = 1;
+    ! ! NSD = ;
+    ! COOR = 0;
+    ! XL = 0,0.001;
+    ! X = 0.,0.0005,0.001;
+    ! TLAM = $_tlamStal;
+    ! THC = $_thcStal;
+    ! TRO = $_troStal;
+    ! QX = 0.;
+    ! DFZ = 1./N;
+    ! QZ = 0.;
+    ! EM = 0.8;
+    ! B = 3;
+    ! NGE = 10;
+    ! ! SD = ;
+    ! ! LQ = ;
+    ! ! ZLR = ;
+    ! ! CLR = ;
+    ! ! FORMF = ;
+    ! ! REFLOOD = ;
+    ! ! PF1 = ;
+    ! ! PF2 = ;
+    ! ! NALF = ;
+    ! ! KIND = ;
+    ! ! PAR = ;
+    ! ! ALM = ;
+  ! ENDIF
+! END
+
+! DATA _Qhs
+  ! MDL = 'QHCS_T';
+  ! ELS = ;
+  ! IF(NV==1) THEN 
+    ! Q = ;
+  ! ENDIF
+! END  
+
+! DATA _Col
+  ! MDL = 'COL';
+  ! ELS = ;
+  ! IF(NV==1) THEN
+    ! S = ;
+    ! DZ = ;
+    ! P = ;
+    ! T(1) = ;
+    ! T(2) = ;
+    ! VOID = ;
+    ! OR = ;
+    ! TYPE = ;
+    ! XB = ;
+    ! MBW = ;
+    ! D = ;
+    ! XNG = ;
+    ! XNF = ;
+  ! ENDIF
+! END
+
+! DATA _Slv
+  ! MDL = 'SLVES';
+  ! ELS = ;
+  ! IF(NV==1) THEN
+    ! NH = ;
+    ! HP = ;
+    ! H = ;
+    ! V = ;
+    ! HD = ;
+    ! HU = ;
+    ! D = ;
+    ! P = ;
+    ! HL = ;
+    ! T = ;
+    ! XB = ;
+    ! MBW = ;
+    ! C = ;
+    ! KZ = ;
+    ! XNG = ;
+    ! XNF = ;
+  ! ENDIF
+! END
+
+! DATA _Tnk
+  ! MDL = 'TANK';
+  ! ELS = ;
+  ! IF(NV==1) THEN  
+    ! NH = ;
+    ! HP = ;
+    ! H = ;
+    ! V = ;
+    ! HD = ;
+    ! HU = ;
+    ! D = ;
+    ! PA = ;
+    ! PV = ;
+    ! HL = ;
+    ! TL = ;
+    ! TENV = ;
+    ! XB = ;
+    ! MBW = ;
+    ! XNG = ;
+    ! XNF = ;
+  ! ENDIF
+! END
+
+! DATA _Bh
+  ! MDL = 'BHEAT';
+  ! ELS = 1;
+  ! IF(NV==1) THEN
+    ! TYPE = 1;
+    ! BCOND = 150.+_t0C;
+  ! ENDIF
+! END
+
+! DATA _Jn
+  ! MDL = 'JN';
+  ! ELS = ;
+  ! IF(NV==1) THEN  ! 
+    ! S = ;
+    ! DZ = ;
+    ! DH = ;
+    ! SMIN = ;
+    ! MU = ;
+    ! TYPE = ;
+    ! JIN = ;
+    ! JOU = ;
+    ! DXDZ = ;
+    ! CSI1 = ;
+    ! CSI2 = ;
+  ! ENDIF
+! END
+
+! DATA _Acc
+  ! MDL = 'ACCUM';
+  ! ELS = ;
+  ! IF(NV==1) THEN  
+    ! GEOM = ;
+    ! L = ;
+    ! D = ;
+    ! DEL = ;
+    ! CR = ;
+    ! GAS = ;
+    ! Q = ;
+    ! GGJ = ;
+    ! TGJ = ;
+    ! P = ;
+    ! H = ;
+    ! TF = ;
+    ! TG = ;
+    ! TW = ;
+    ! TE = ;
+    ! XB = ;
+    ! MBW = ;
+  ! ENDIF
+  
+! END
+
+! DATA _Mod
+  ! MDL = 'MOD';
+  ! ELS = ;
+  ! IF(NV==1) THEN
+    ! KR = ;
+    ! KF = ;
+    ! KT = ;
+    ! KB = ;
+    ! TET = ;
+    ! FRM = ;
+    ! R(1:KR,1) = ;
+    ! R(1:KR,2) = ;
+    ! F(1:KF,1) = ;
+    ! F(1:KF,2) = ;
+    ! T(1:KT,1) = ;
+    ! T(1:KT,2) = ;
+    ! B(1:KB,1) = ;
+    ! B(1:KB,2) = ;
+    ! W = ;
+    ! P = ;
+    ! QZ = ;
+  ! ENDIF
+  
+! END
+
+! DATA _Fu
+  ! MDL = 'FUEL';
+  ! ELS = ;
+  ! IF(NV==1) THEN
+    ! K = ;
+    ! TET = ;
+    ! FRM = ;
+    ! R(1:K,1:2) = ;
+    ! W = ;
+    ! P = ;
+    ! QZ = ;
+    ! AV = ;
+  ! ENDIF
+  
+! END
+
+! DATA _Qfl
+  ! MDL = 'QFL';
+  ! ELS = ;
+  ! IF(NV==1) THEN  
+    ! N = ;
+    ! QF = ;
+    ! QG = ;
+  ! ENDIF
+! END
+
+! DATA _Sr
+  ! MDL = 'SR';
+  ! ELS = ;
+  ! IF(NV==1) THEN  
+    ! K = ;
+    ! R(1:K,1) = ;
+    ! R(1:K,2) = ;
+    ! FRM = ;
+    ! S = ;
+    ! LS = ;
+  ! ENDIF
+! END
+
+! DATA _Tm
+  ! MDL = 'TM';
+  ! ELS = ;
+  ! IF(NV==1) THEN  
+    ! TMIX = ;
+    ! OR = ;
+    ! BETA = ;
+    ! PB = ;
+  ! ENDIF
+
+! END
+
+! DATA _Pmp
+  ! MDL = 'CPUMP';
+  ! ELS = ;
+  ! IF(NV==1) THEN
+    ! MODE = ;
+    ! IF (MODE <> 2) THEN
+      ! NM1 = ;
+      ! NM2 = ;
+      ! NM3 = ;
+      ! NM4 = ;
+      ! NP1 = ;
+      ! NP2 = ;
+      ! NP3 = ;
+      ! NP4 = ;
+      ! NKH = ;
+      ! NKM = ;
+      ! OR = ;
+      ! CM1 = ;
+      ! CM2 = ;
+      ! CM3 = ;
+      ! CM4 = ;
+      ! CP1 = ;
+      ! CP2 = ;
+      ! CP3 = ;
+      ! CP4 = ;
+      ! TYPE = ;
+      ! KH = ;
+      ! KM = ;
+      ! REVN = ;
+      ! QN = ;
+      ! DPN = ;
+      ! EFF1 = ;
+      ! EFF = ;
+      ! HMOM = ;
+      ! J = ;
+      ! F = ;
+      ! D = ;
+      ! K = ;
+      ! REV0 = ;
+      ! REV = ;
+      ! HVAC = ;
+      ! PEXP = ;
+      ! TEXP = ;
+      ! DIAM = ;
+    ! ENDIF
+  ! ENDIF
+! END
+
+! DATA _Cor
+  ! MDL = 'CORE';
+  ! ELS = ;
+  ! IF(NV==1) THEN
+    ! KI = ;
+    ! KK = ;
+    ! KJ = ;
+    ! KH = ;
+    ! QNOM = ;
+    ! L = ;
+    ! S = ;
+    ! RO_Z = ;
+    ! RO_US = ;
+    ! ! BI = ;
+    ! ! LI = ;
+    ! NDEF = ;
+    ! EPSK = ;
+    ! QK = ;
+    ! LJ(1:KK,1:KJ) = ;
+    ! EDJ(1:KK,1:KJ) = ;
+    ! NHIS = ;
+    ! NH = ;
+    ! DTH = ;
+  ! ENDIF
+
+! END
+
+! DATA _Rad
+  ! MDL = 'RAD';
+  ! ELS = ;
+  ! IF(NV==1) THEN
+    ! VF(1,1) = 0.;
+    ! VF(1,2) = 1.-VF(1,1);
+    ! VF(2,1) = _din/_dout;
+    ! VF(2,2) = 1.-VF(2,1);
+  ! ENDIF
+! END
+
+!!eb
+
+!!bb EVENTs
+EVENT _CalcSensor     ! Измеряемые значения
+  type = REG;
+  replace = 1;
+  turn_on = 1;
+  IF first THEN
+    first = 0;
+  ENDIF
+  !!bb Датчики Mdl
+  _sensor(1) = "($W.CH1(1,2),1);
+  _sensor(2) = P.BVOL_T1/_MPa;
+
+  !!eb
+ 
+END
+EVENT _Monitor(_dt)
+  ! type = ALW;                  
+  replace = 1;
+  turn_on = 1;
+  ! Диагностика геометрии
+  IF first THEN 
+    first = 0;
+    _cntr := 0.;
+    _i:=0;_j:=0;_m:=0;_dzFullCh:=0.;_dhFullCh:=0.;_vFullCh:=0.;
+    PRINT '=== GEOMETRY DIAGNOSTICS ===';
+    PRINT '*** CH DATA ***';
+    _ch(1:1) := 1;
+    ! Геометрия каналов
+    DO _i=1,1;
+      _m = _ch(_i);
+      _dzFullCh=0.;_dhFullCh=0.;_vFullCh=0.
+      PRINT '- CH',_m;
+      PRINT 'Cl','----- DZ ------','----- DH ------','----- V -------',
+        '----- PR ------';
+      DO _j=1,N.CH(_m);
+        _dzFullCh = _dzFullCh + DZ.CH(_m)(_j);
+        _dhFullCh = _dhFullCh + DH.CH(_m)(_j);
+        _vFullCh = _vFullCh + V.CH(_m)(_j);
+        PRINT _j,DZ.CH(_m)(_j),DH.CH(_m)(_j),V.CH(_m)(_j),PR.CH(_m)(_j);
+      ENDDO
+      PRINT 'Cl','----- S -------','----- D -------','---- Type -----',
+        '----- DэквS ---';
+      DO _j=1,N.CH(_m);
+        PRINT _j,S.CH(_m)(_j),D.CH(_m)(_j),TYPE.CH(_m)(_j),'             ',
+          ((4*S.CH(_m)(_j))/_pi)**0.5;
+      ENDDO
+      PRINT 'Jc','---- DZJ ------','---- SJ -------','---- JUN ------',
+        '---- DэквSJ ---';
+      DO _j=1,N.CH(_m)+1;
+        PRINT _j,DZJ.CH(_m)(_j),SJ.CH(_m)(_j),JUN.CH(_m)(_j),'             ',
+          ((4*SJ.CH(_m)(_j))/_pi)**0.5;
+      ENDDO
+      IF _diag > 1 THEN ! вывод исходных значений
+        PRINT 'Cl','----- P -------','----- T1 ------','---- T2 -------';
+        DO _j=1,N.CH(_m);
+          PRINT _j,P.CH(_m)(_j),T.CH(_m)(1,_j)-_tOffset,
+            T.CH(_m)(2,_j)-_tOffset;
+        ENDDO
+        PRINT 'Cl','----- VOID ----','----- XNG3 ----','---- XNG4 -----';
+        DO _j=1,N.CH(_m);
+          PRINT _j,VOID.CH(_m)(_j),XNG.CH(_m)(3,_j),XNG.CH(_m)(4,_j);
+        ENDDO
+        PRINT 'Cl','----- XNF3 ----','---- XNF4 -----','---------------';
+        DO _j=1,N.CH(_m);
+          PRINT _j,XNF.CH(_m)(3,_j),XNF.CH(_m)(4,_j);
+        ENDDO
+      ENDIF
+      PRINT '----------------------------------------------------------------';
+      PRINT 'Full length    ',_dzFullCh;
+      PRINT 'Full height dif',_dhFullCh;
+      PRINT 'Full volume    ',_vFullCh;
+      PRINT '---';
+      ! PRINT 'Минимальный проход    ',MINA( S.CH(_m)(1:N.CH(_m)) );
+      ! PRINT 'Максимальный проход   ',MAXA( S.CH(_m)(1:N.CH(_m)) );
+      ! PRINT 'Минимальный Dг        ',MINA( D.CH(_m)(1:N.CH(_m)) );
+      ! PRINT 'Максимальный Dг       ',MAXA( D.CH(_m)(1:N.CH(_m)) );
+    ENDDO
+    ! PRINT '*** COL DATA ***';
+    ! _col:= 1,2,3;
+    ! DO _i=1,3;
+      ! _m = _col(_i);
+      ! PRINT '- COL',_m;
+      ! PRINT 'Объем  ',V.COL(_m);
+      ! IF _diag > 1 THEN ! вывод исходных значений
+        ! PRINT 'VOID   ',VOID.COL(_m);
+        ! PRINT 'T1,2   ',T.COL(_m)(1)-_tOffset,T.COL(_m)(2)-_tOffset;
+        ! PRINT 'P      ',P.COL(_m);
+        ! PRINT 'XNG3,4 ',XNG.COL(_m)(3),XNG.COL(_m)(4);
+      ! ENDIF
+      ! PRINT '---';
+    ! ENDDO
+    ! PRINT '*** HCS DATA ***';
+    ! _dzFullHcs:=0.;_f1FullHcs:=0.;_f2FullHcs:=0.;
+    ! _hcs(1:1):=1;
+    ! DO _i=1,1;
+      ! _m = _hcs(_i);
+      ! PRINT '- HCS',_m;
+      ! _dzFullHcs=0.;_f1FullHcs=0.;_f2FullHcs=0.;
+      ! ! Геометрия ТК
+      ! PRINT 'Cl','----- DFZ ----- ','----- DF1 ----- ','---- DF2 ------';
+        ! DO _j=1,N.HCS(_m);      
+          ! _dzFullHcs = _dzFullHcs + DFZ.HCS(_m)(_j);
+          ! _f1FullHcs = _f1FullHcs + DF.HCS(_m)(1,_j);
+          ! _f2FullHcs = _f2FullHcs + DF.HCS(_m)(2,_j);
+          ! PRINT _j,DFZ.HCS(_m)(_j),DF.HCS(_m)(1,_j),DF.HCS(_m)(2,_j);
+        ! ENDDO
+      ! PRINT '----------------------------------------------------------------';
+      ! PRINT 'Full length      ',_dzFullHcs;
+      ! PRINT 'Surf 1 area      ',_f1FullHcs;
+      ! PRINT 'Surf 2 area      ',_f2FullHcs;
+      ! PRINT 'Geom mult B      ',B.HCS(_m);
+      ! PRINT 'Coeff. ALM-1     ',ALM.HCS(_m)(1);
+      ! PRINT 'Coeff. ALM-2     ',ALM.HCS(_m)(2);
+      ! PRINT '---'
+    ! ENDDO
+    ! PRINT '*** SLVES DATA ***';
+    ! _slv := 1,2,3;
+    ! DO _i=1,3;
+      ! _m = _slv(_i);
+      ! PRINT '- SLVES',_m;
+      ! ! Геометрия SLVES
+      ! PRINT 'Full height      ',H.SLVES(_m)(NH.SLVES(_m));
+      ! PRINT 'Full volume      ',V.SLVES(_m)(NH.SLVES(_m));
+      ! PRINT 'Water level      ',HL.SLVES(_m);
+      ! PRINT 'Dg eq tubes      ',D.SLVES(_m);
+      ! IF NP.SLVES(_m)>0 THEN 
+      ! PRINT 'Connect.point hgt';
+        ! DO _j=1,NP.SLVES(_m);
+          ! PRINT '                 ',HP.SLVES(_m)(_j);
+        ! ENDDO
+      ! ENDIF
+      ! IF _diag > 1 THEN ! вывод исходных значений
+        ! PRINT 'T1,2   ',T.SLVES(_m)(1)-_tOffset,T.SLVES(_m)(2)-_tOffset;
+        ! PRINT 'P      ',P.SLVES(_m);
+        ! PRINT 'XNG3,4 ',XNG.SLVES(_m)(3),XNG.SLVES(_m)(4);
+        ! PRINT 'XNF3,4 ',XNF.SLVES(_m)(3),XNF.SLVES(_m)(4);
+      ! ENDIF
+      ! PRINT '---';
+    ! ENDDO
+    ! PRINT '*** JN DATA ***';
+    ! _jn = 1,2,3;
+    ! DO _i=1,3;
+      ! _m = _jn(_i);
+      ! PRINT '- JN',_m;
+      ! ! Геометрия JN
+      ! PRINT 'Height diff.     ',DH.JN(_m);
+      ! PRINT 'CSI 1,2          ',CSI1.JN(_m),CSI2.JN(_m);
+      ! PRINT 'DZ               ',DZ.JN(_m);
+      ! PRINT 'S                ',S.JN(_m);
+      ! PRINT 'Smin             ',SMIN.JN(_m);
+      ! PRINT '---';
+    ! ENDDO
+    ! PRINT '*** SCH DATA ***';
+    ! _sch := 1,2,3;
+    ! DO _i=1,3;
+      ! _m = _sch(_i);
+      ! PRINT '- SCH',_m;
+      ! ! Геометрия SCH
+      ! PRINT 'Height diff.     ',DH.SCH(_m);
+      ! PRINT 'DZ               ',DZ.SCH(_m);
+      ! PRINT 'S                ',S.SCH(_m);
+      ! PRINT 'Smin             ',SMIN.SCH(_m);
+      ! PRINT 'Mu               ',MU.SCH(_m);
+      ! PRINT 'TYPE             ',TYPE.SCH(_m);
+      ! PRINT '---';
+    ! ENDDO
+    PRINT '*** LR DATA ***';
+    _lr(1:1) := 1;
+    DO _i=1,1;
+      _m = _lr(_i);
+      PRINT '- LR',_m;
+      ! Геометрия LR
+      PRINT 'CSI 1,2          ',CSI1.LR(_m),CSI2.LR(_m);
+      PRINT '---';
+    ENDDO
+    ! PRINT '*** VAL DATA ***';
+    ! _val := 1,2,3;
+    ! DO _i=1,3;
+      ! _m = _val(_i);
+      ! PRINT '- VAL',_m;
+      ! ! Геометрия VAL
+      ! PRINT 'CSI 1,2          ',CSI1.VAL(_m),CSI2.VAL(_m);
+      ! PRINT 'S                ',S.VAL(_m);
+      ! PRINT '---';
+    ! ENDDO
+    ! PRINT '=== GEOMETRY DIAGNOSTICS END ===';
+  ENDIF
+  ! инкремент счетчика
+  IF _cntr<=_dt THEN
+    _cntr = _cntr+DT;
+  ELSE
+    _cntr = 0.;
+  ENDIF
+  
+  IF _cntr==0. THEN ! выполнение процедуры
+    PRINT '=== CALCULATION DIAGNOSTICS ===';
+    PRINT 'TAU = ',TAU,'  DT = ',DT;
+    PRINT '=== CH DATA ===';
+    _mCh := 0.;_k:=0;_x:=0.;_y:=0.;
+    DO _i=1,1;
+      _k = _ch(_i);
+      PRINT ' TAU = ',TAU,'  DT = ',DT;
+      PRINT '- CH',_k;
+      PRINT 'Cl','----- P -------','---- VOID -----','---- T1 -------',
+        '---- DEN1 ------';
+      _mCh = 0.;
+      DO _j=1,N.CH(_k);
+        ! Расчет массы канала
+        _mCh = _mCh + 
+          V.CH(_k)(_j)*( VOID.CH(_k)(_j)*DEN.CH(_k)(2,_j) + 
+          (1.-VOID.CH(_k)(_j))*DEN.CH(_k)(1,_j) );
+        PRINT _j,P.CH(_k)(_j),VOID.CH(_k)(_j),T.CH(_k)(1,_j)-_tOffset,
+          DEN.CH(_k)(1,_j);
+      ENDDO
+      PRINT 'Cl','---- T2 -------','---- DEN2 ------','---- XNG3 -----',
+        '---- XNG4 -----';
+      DO _j=1,N.CH(_k);
+        PRINT _j,T.CH(_k)(2,_j)-_tOffset,DEN.CH(_k)(2,_j),XNG.CH(_k)(3,_j),
+          XNG.CH(_k)(4,_j);
+      ENDDO
+      PRINT 'Jc','---- CFLw -----','---- CFLs -----';
+      DO _j=1,N.CH(_k)+1;
+        IF("($W.CH(_k)(1,_j),1) < -1.e-13 | 
+          "($W.CH(_k)(1,_j),1) > 1.e-13) THEN
+          _x = DT*W.CH(_k)(1,_j)/DZJ.CH(_k)(_j);
+        ELSE
+          _x = -888.;
+        ENDIF
+        IF("($W.CH(_k)(2,_j),2) < -1e-13 | 
+          "($W.CH(_k)(2,_j),2) > 1e-13) THEN
+          _y = DT*W.CH(_k)(2,_j)/DZJ.CH(_k)(_j);
+        ELSE
+          _y = -888.;
+        ENDIF
+        PRINT _j,_x,_y;
+      ENDDO
+      PRINT 'Jc','---- Gwater ---','---- Gsteam ---','---- Gmix -----',
+        '---- FRWw -----';
+      DO _j=1,N.CH(_k)+1;
+        PRINT _j,"($W.CH(_k)(1,_j),1),"($W.CH(_k)(2,_j),2),
+          "($W.CH(_k)(1,_j),1) + "($W.CH(_k)(2,_j),2),
+          W.CH(_k)(1,_j)*FRW.CH(_k)(1,_j);
+      ENDDO
+      PRINT 'Jc','---- Wwater ---','---- Wsteam ---','---- MAPJ -----',
+        '---- FRWs -----';
+      DO _j=1,N.CH(_k)+1;
+        PRINT _j,W.CH(_k)(1,_j),W.CH(_k)(2,_j),MAPJ.CH(_k)(_j),
+          '              ',W.CH(_k)(2,_j)*FRW.CH(_k)(2,_j);
+      ENDDO
+      PRINT '-- Mass CH = ',_mCh;
+      PRINT '---';
+    ENDDO  
+
+    ! PRINT '=== COL DATA ===';
+    ! PRINT ' TAU = ',TAU,'  DT = ',DT;
+    ! DO _i=1,3;
+      ! _k = _col(_i);
+      ! PRINT '- COL',_k;
+      ! PRINT '---- P -------','---- T1 -------','---- T2 -------',
+        ! '---- VOID -----';
+        ! PRINT P.COL(_k),T.COL(_k)(1)-_tOffset,T.COL(_k)(2)-_tOffset,
+          ! VOID.COL(_k);
+      ! PRINT '---';
+    ! ENDDO
+
+    ! PRINT '=== HCS DATA ===';
+    ! DO _i=1,1;
+      ! _k = _hcs(_i);
+      ! PRINT ' TAU = ',TAU,'  DT = ',DT;
+      ! PRINT '- HCS',_k;
+      ! PRINT 'Cl','----- Tw1 -----','---- Tw2 ------','---- ALW1 -----';
+      ! DO _j=1,N.HCS(_k);
+        ! PRINT _j,TW.HCS(_k)(1,_j)-_tOffset,TW.HCS(_k)(2,_j)-_tOffset,
+          ! ALW.HCS(_k)(1,_j);
+      ! ENDDO
+      ! PRINT 'Cl','---- ALW2 -----','---- Qw1-1 ----','---- Qw1-2 ----';
+      ! _x = 0.;_y = 0.;  ! Мощности
+      ! DO _j=1,N.HCS(_k);
+        ! _x = _x + QW.HCS(_k)(1,_j)+QW.HCS(_k)(2,_j);
+        ! _y = _y + QW.HCS(_k)(3,_j)+QW.HCS(_k)(4,_j);
+        ! PRINT _j,ALW.HCS(_k)(2,_j),QW.HCS(_k)(1,_j),QW.HCS(_k)(2,_j);
+      ! ENDDO
+      ! PRINT 'Cl','---- Qw2-1 ----','---- Qw2-2 ----','---- Mod1 -----';
+      ! DO _j=1,N.HCS(_k);
+        ! PRINT _j,QW.HCS(_k)(3,_j),QW.HCS(_k)(4,_j),MOD.HCS(_k)(1,_j);
+      ! ENDDO
+      ! PRINT 'Cl','---- QR1 ------','---- QR2 ------','---- Mod2 -----';
+      ! DO _j=1,N.HCS(_k);
+        ! PRINT _j,QR.HCS(_k)(1,_j),QR.HCS(_k)(2,_j),MOD.HCS(_k)(2,_j);
+      ! ENDDO
+      ! PRINT 'Total power Qw/1, Qw/2:',_x,_y;
+      ! PRINT '---';
+    ! ENDDO  
+    
+    ! PRINT '=== SLVES DATA ===';
+    ! DO _i=1,3;
+      ! _k = _slv(_i);
+      ! PRINT ' TAU = ',TAU,'  DT = ',DT;
+      ! PRINT '- SLVES',_k;
+      ! PRINT '----- P -------','---- T1 -------','---- T2 -------';
+      ! PRINT P.SLVES(_k),T.SLVES(_k)(1)-_tOffset,T.SLVES(_k)(2)-_tOffset;
+      ! PRINT '----- HL ------','---- EH1 ------','---- EH2 ------';
+      ! PRINT HL.SLVES(_k),EH.SLVES(_k)(1),EH.SLVES(_k)(2);
+      ! PRINT '----- VOIDL ---','---- Q1 -------','---- Q2 -------';
+      ! PRINT VOIDL.SLVES(_k),Q.SLVES(_k)(1),Q.SLVES(_k)(2);
+      ! PRINT '----- M1 ------','---- TS1 ------','---- GEN1 -----';
+      ! PRINT M.SLVES(_k)(1),TS.SLVES(_k)(1),GEN.SLVES(_k)(1);        
+      ! PRINT '---';
+    ! ENDDO
+    
+    ! PRINT '=== SCH DATA ===';
+    ! PRINT ' TAU = ',TAU,'  DT = ',DT;
+    ! DO _i=1,3;
+      ! _k = _sc(_i);
+      ! PRINT '- SCH',_k;
+      ! PRINT '---- Gw -------','---- Gs -------','---- DELTA ----',
+        ! '----- W -------';
+        ! PRINT "($W.SCH(_k),1),"($W.SCH(_k),2),DELTA.SCH(_k),
+          ! W.SCH(_k);
+        ! PRINT '---';
+    ! ENDDO
+    
+    ! PRINT '=== JN DATA ===';
+    ! PRINT ' TAU = ',TAU,'  DT = ',DT;
+    ! DO _i=1,3;
+      ! _k = _jn(_i);
+      ! PRINT '- JN',_k;
+      ! PRINT '---- Gw -------','---- Gs -------','---- DELTA ----',
+        ! '----- W -------';
+        ! PRINT "($W.JN(_k),1),"($W.JN(_k),2),DELTA.JN(_k),
+          ! W.JN(_k);
+      ! PRINT '---';
+    ! ENDDO
+    
+    ! PRINT '=== VAL DATA ===';
+    ! PRINT ' TAU = ',TAU,'  DT = ',DT;
+    ! DO _i=1,3;
+      ! _k = _val(_i);
+      ! PRINT '- VAL',_k;
+      ! PRINT '---- S -------','---- CSI -------';
+      ! PRINT S.VAL(_k),CSI.VAL(_k);
+      ! PRINT '---';
+    ! ENDDO
+    
+    ! PRINT '=== MODEL Mdl1 CALCULATION DIAGNOSTICS END ===';
+  ENDIF
+  
+END
+EVENT _DtHandle
+  TYPE = 0;
+  REPLACE = 1;
+  TURN_ON = 1;
+  IF (TAU>0.) THEN
+    dt_max = 0.01;
+  ENDIF
+  IF (TAU>0.)&(TAU<=3.) THEN
+    dt_max = 0.01;
+    dt_out = 0.1;
+    ! dt_sav = 10.;
+    dt_diag = 10.;
+  ENDIF
+  IF (TAU>3.) THEN
+    dt_max = 0.01;
+    dt_out = 1.;
+    ! dt_sav = 10.;
+    dt_diag = 10.;
+  ENDIF
+  
+END
+EVENT _Actions
+  TYPE = 0;
+  REPLACE = 1;
+  TURN_ON = 1;
+  IF (TAU>1.)&(TAU<5.) THEN 
+    P.BVOL_T1 = MIN(1.1*_MPa,P.BVOL_T1+0.05*_MPa*DT);
+  ENDIF
+  IF( (TAU>0.) ) THEN
+    CALL _Monitor(0.5);
+  ENDIF
+END
+
+!!eb
+
+!!bb OUTPUTs
+OUTPUT _Out ! Общая процедура вывода
+WRITE DT,_tOffset,_pi,_gg,_xgAir,_xgN2,_kgs,_MPa,_kPa,_MWt,_kWt,_atm,
+  dt_out,dt_max,dt_diag,_monPer,dt_sav,restart,_tauRest,_sensor;
+END
+
+!!eb 
