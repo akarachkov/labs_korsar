@@ -6,8 +6,9 @@ from pathlib import Path
 # ============================================================
 # НАСТРОЙКА
 # ============================================================
-BASE_DIR = Path(r"C:\Users\Toy_G\Desktop\ВУЗ\6 курс 1 семестр\Инновационные подходы в проектировании и конструировании реакторов АЭС\Лабораторная работа 1\labs_korsar-master\labs_korsar-master\006_counter-current_heat_exchanger\КОРСАР (код)")
-GRID_DIR = BASE_DIR / "Grid"
+BASE_DIR = Path(r"C:\Users\Toy_G\Desktop\ВУЗ\6 курс 1 семестр\Инновационные подходы в проектировании и конструировании реакторов АЭС\Лабораторная работа 1\labs_korsar-master\labs_korsar-master\006_counter-current_heat_exchanger\task")
+GRID_DIR = BASE_DIR / "Grid"      # Grid/ — внутри task/
+PIC_DIR = BASE_DIR.parent / "pic" # pic/ — на уровень выше task/, т.е. в корне 006_counter-current_heat_exchanger/
 
 G_HOT = 1.0     # кг/с, из kordat (Gh)
 G_COLD = 1.0    # кг/с, из kordat (Gc)
@@ -143,7 +144,8 @@ def study_N():
     plt.grid(True, alpha=0.3)
     plt.legend()
     plt.tight_layout()
-    plt.savefig(GRID_DIR / 'convergence_N.png', dpi=150)
+    PIC_DIR.mkdir(exist_ok=True)
+    plt.savefig(PIC_DIR / 'convergence_N.png', dpi=150)
     plt.close()
     print(f"  Сохранён график: {GRID_DIR / 'convergence_N.png'}")
 
@@ -204,7 +206,8 @@ def study_K(N_fix):
     plt.grid(True, alpha=0.3, which='both')
     plt.legend()
     plt.tight_layout()
-    plt.savefig(GRID_DIR / 'convergence_K.png', dpi=150)
+    PIC_DIR.mkdir(exist_ok=True)
+    plt.savefig(PIC_DIR / 'convergence_K.png', dpi=150)
     plt.close()
 
     print(f"  Сохранён график: {GRID_DIR / 'convergence_K.png'}")
@@ -225,8 +228,10 @@ def study_K(N_fix):
 # ============================================================
 
 if __name__ == "__main__":
+    PIC_DIR.mkdir(exist_ok=True)
     GRID_DIR.mkdir(exist_ok=True)
-    print(f"Папка с сеточными расчётами: {GRID_DIR}\n")
+    print(f"Файлы сходимости: {GRID_DIR}")
+    print(f"Графики:         {PIC_DIR}\n")
 
     res_N = study_N()
 

@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 # ============================================================
 # НАСТРОЙКА
 # ============================================================
-filepath = r"C:\Users\Toy_G\Desktop\ВУЗ\6 курс 1 семестр\Инновационные подходы в проектировании и конструировании реакторов АЭС\Лабораторная работа 1\labs_korsar-master\labs_korsar-master\006_counter-current_heat_exchanger\КОРСАР (код)\\result.dat"
+filepath = r"C:\Users\Toy_G\Desktop\ВУЗ\6 курс 1 семестр\Инновационные подходы в проектировании и конструировании реакторов АЭС\Лабораторная работа 1\labs_korsar-master\labs_korsar-master\006_counter-current_heat_exchanger\task\\result.dat"
 N1 = 10                # число ячеек по длине (как в kordat)
 L_total = 3.0          # полная длина теплообменника, м (Lt из kordat)
 T0_C = 273.15          # смещение для перевода К -> °C
@@ -194,8 +194,10 @@ def main():
     abs_path = os.path.abspath(filepath)
     print(f"Используется файл: {abs_path}")
 
-    results_dir = os.path.join(os.path.dirname(abs_path), 'results')
-    os.makedirs(results_dir, exist_ok=True)
+    task_dir = os.path.dirname(abs_path)                 # .../task
+    pic_dir  = os.path.join(os.path.dirname(task_dir), 'pic')  # .../pic
+    os.makedirs(pic_dir, exist_ok=True)
+    results_dir = pic_dir
     print(f"Папка для результатов: {results_dir}")
 
     data = load_data(abs_path, N1)
