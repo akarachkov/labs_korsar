@@ -1,10 +1,8 @@
 import os
 import numpy as np
-import pandas as pd
 import matplotlib
-matplotlib.use('Agg')  # без открытия окна
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from datetime import datetime
 
 
 # ============================================================
@@ -13,7 +11,7 @@ from datetime import datetime
 filepath = r"C:\Users\Toy_G\Desktop\ВУЗ\6 курс 1 семестр\Инновационные подходы в проектировании и конструировании реакторов АЭС\Лабораторная работа 1\labs_korsar-master\labs_korsar-master\006_counter-current_heat_exchanger\КОРСАР (код)\\result.dat"
 N1 = 10                # число ячеек по длине (как в kordat)
 L_total = 3.0          # полная длина теплообменника, м (Lt из kordat)
-STATIONARY_TOL = 0.01  # порог "стационарности" по T, К
+T0_C = 273.15          # смещение для перевода К -> °C
 
 
 # ============================================================
@@ -21,11 +19,7 @@ STATIONARY_TOL = 0.01  # порог "стационарности" по T, К
 # ============================================================
 
 def load_data(filepath, n1):
-    """
-    Чтение result.dat, полученного утилитой KUTIL2.
-    KUTIL2 может разбивать одну временную запись на несколько строк,
-    поэтому собираем ВСЕ числа подряд и нарезаем по (1 + 6*N1).
-    """
+    """Чтение result.dat, полученного утилитой KUTIL2. KUTIL2 может разбивать одну временную запись на несколько строк, поэтому собираем ВСЕ числа подряд и нарезаем по (1 + 6*N1)."""
     with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
         text = f.read()
 
@@ -72,48 +66,28 @@ def load_data(filepath, n1):
 
 
 # ============================================================
-# 2. ОПРЕДЕЛЕНИЕ ИНДЕКСА "СТАЦИОНАРНОГО" СРЕЗА
+# 2. ГРАФИК 1: ТЕМПЕРАТУРЫ ПОТОКОВ И СТЕНКИ (последний срез)
 # ============================================================
 
-def find_stationary_index(data, tol=STATIONARY_TOL):
-    """
-    Возвращает индекс временного слоя, который считаем стационарным.
-    Алгоритм: идём с конца и ищем последний слой, который отличается
-    от предыдущего меньше, чем на tol по всем T (потоки + стенки).
-    Если такого нет — возвращаем последний индекс и предупреждаем.
-    """
-    stack = np.hstack([
-        data['T_hot'], data['T_cold'],
-        data['Tw_in'], data['Tw_out'],
-    ])   # (n_times, 4*N1)
-    n = stack.shape[0]
-    for i in range(n - 1, 0, -1):
-        diff = np.max(np.abs(stack[i] - stack[i - 1]))
-        if diff < tol:
-            print(f"  Стационарный срез: индекс {i}, t = {data['time'][i]:.3f} с "
-                  f"(макс. ΔT между соседними слоями = {diff:.4g} К)")
-            return i
-    print(f"  ⚠ Стационар не достигнут: берём последний срез "
-          f"t = {data['time'][-1]:.3f} с. Рекомендуется увеличить fin_tim.")
-    return n - 1
-
-
-# ============================================================
-# 3. ГРАФИК 1: ТЕМПЕРАТУРЫ ПОТОКОВ И СТЕНКИ (стационар)
-# ============================================================
-
-def plot_steady_temperature(data, idx_stat, L_total, save_dir):
+def plot_steady_temperature(data, L_total, save_dir):
     x = np.linspace(0, L_total, N1)
+    idx = len(data['time']) - 1   # последний временной слой
+
+    # Перевод в °C
+    T_hot_C   = data['T_hot'][idx]  - T0_C
+    T_cold_C  = data['T_cold'][idx] - T0_C
+    Tw_in_C   = data['Tw_in'][idx]  - T0_C
+    Tw_out_C  = data['Tw_out'][idx] - T0_C
 
     fig, ax = plt.subplots(figsize=(10, 6))
-    ax.plot(x, data['T_hot'][idx_stat],   '-',  lw=2.0, label='Горячий поток (T_hot)')
-    ax.plot(x, data['T_cold'][idx_stat],  '-',  lw=2.0, label='Холодный поток (T_cold)')
-    ax.plot(x, data['Tw_in'][idx_stat],   '--', lw=1.6, label='Стенка, внутр. поверхность (Tw1)')
-    ax.plot(x, data['Tw_out'][idx_stat],  '--', lw=1.6, label='Стенка, наружн. поверхность (Tw2)')
+    ax.plot(x, T_hot_C,  '-o', color='red',  lw=2.0, ms=5, label='Горячий поток (T_hot)')
+    ax.plot(x, T_cold_C, '-o', color='blue', lw=2.0, ms=5, label='Холодный поток (T_cold)')
+    ax.plot(x, Tw_in_C,  '--o', color='darkred', lw=1.6, ms=4, label='Стенка, внутр. поверхность (Tw1)')
+    ax.plot(x, Tw_out_C, '--o', color='darkblue', lw=1.6, ms=4, label='Стенка, наружн. поверхность (Tw2)')
 
     ax.set_xlabel('Координата вдоль теплообменника, м')
-    ax.set_ylabel('Температура, К')
-    ax.set_title(f'Температуры потоков и стенки (стационар, t = {data["time"][idx_stat]:.2f} с)')
+    ax.set_ylabel('Температура, °C')
+    ax.set_title(f'Температуры потоков и стенки (t = {data["time"][idx]:.2f} с)')
     ax.grid(True, alpha=0.3)
     ax.legend()
     plt.tight_layout()
@@ -123,21 +97,20 @@ def plot_steady_temperature(data, idx_stat, L_total, save_dir):
 
 
 # ============================================================
-# 4. ГРАФИК 2: КОЭФФИЦИЕНТЫ ТЕПЛООТДАЧИ (стационар)
+# 3. ГРАФИК 2: КОЭФФИЦИЕНТЫ ТЕПЛООТДАЧИ (последний срез)
 # ============================================================
 
-def plot_steady_alpha(data, idx_stat, L_total, save_dir):
+def plot_steady_alpha(data, L_total, save_dir):
     x = np.linspace(0, L_total, N1)
+    idx = len(data['time']) - 1
 
     fig, ax = plt.subplots(figsize=(10, 6))
-    ax.plot(x, data['ALW_in'][idx_stat],  '-',  lw=2.0,
-            label=r'$\alpha$ внутр. поверхности (ALW1)')
-    ax.plot(x, data['ALW_out'][idx_stat], '--', lw=2.0,
-            label=r'$\alpha$ наружн. поверхности (ALW2)')
+    ax.plot(x, data['ALW_in'][idx],  '-o', color='red',  lw=2.0, ms=5, label=r'$\alpha$ внутр. поверхности (ALW1)')
+    ax.plot(x, data['ALW_out'][idx], '-o', color='blue', lw=2.0, ms=5, label=r'$\alpha$ наружн. поверхности (ALW2)')
 
     ax.set_xlabel('Координата вдоль теплообменника, м')
     ax.set_ylabel(r'$\alpha$, Вт/(м$^2\cdot$К)')
-    ax.set_title(f'Коэффициенты теплоотдачи (стационар, t = {data["time"][idx_stat]:.2f} с)')
+    ax.set_title(f'Коэффициенты теплоотдачи (t = {data["time"][idx]:.2f} с)')
     ax.grid(True, alpha=0.3)
     ax.legend()
     plt.tight_layout()
@@ -147,33 +120,24 @@ def plot_steady_alpha(data, idx_stat, L_total, save_dir):
 
 
 # ============================================================
-# 5. ГРАФИК 3: ТЕМПЕРАТУРЫ НА ВЫХОДЕ ВО ВРЕМЕНИ
+# 4. ГРАФИК 3: ТЕМПЕРАТУРЫ НА ВЫХОДЕ ВО ВРЕМЕНИ
 # ============================================================
 
 def plot_outlet_temperature(data, save_dir):
+    """ Схема потоков:
+        CH1 (горячий) идёт справа налево: выход = ячейка 1 (индекс 0)
+        CH2 (холодный) идёт слева направо: выход = ячейка N1 (индекс N1-1)
     """
-    Изменение температуры потоков во времени на ВЫХОДЕ из каналов.
-
-    Схема потоков (из kordat):
-      - CH1 (горячий) идёт СПРАВА НАЛЕВО:
-            подача массы в ячейку N1, уход через ячейку 1
-            => выход = ячейка 1 (индекс 0)
-      - CH2 (холодный) идёт СЛЕВА НАПРАВО:
-            подача массы в ячейку 1, уход через ячейку N1
-            => выход = ячейка N1 (индекс N1-1)
-    """
-    i_out_hot  = 0         # выход горячего канала — ячейка 1
-    i_out_cold = N1 - 1    # выход холодного канала — ячейка N1
-
+    i_out_hot  = 0
+    i_out_cold = N1 - 1
     t = data['time']
+
     fig, ax = plt.subplots(figsize=(10, 6))
-    ax.plot(t, data['T_hot'][:, i_out_hot],   '-',  lw=2.0,
-            label='Горячий поток на выходе (ячейка 1)')
-    ax.plot(t, data['T_cold'][:, i_out_cold], '-',  lw=2.0,
-            label='Холодный поток на выходе (ячейка N1)')
+    ax.plot(t, data['T_hot'][:, i_out_hot]  - T0_C, '-', color='red',  lw=2.0, label='Горячий поток на выходе (ячейка 1)')
+    ax.plot(t, data['T_cold'][:, i_out_cold] - T0_C, '-', color='blue', lw=2.0, label='Холодный поток на выходе (ячейка N1)')
 
     ax.set_xlabel('Время, с')
-    ax.set_ylabel('Температура, К')
+    ax.set_ylabel('Температура, °C')
     ax.set_title('Изменение температур потоков на выходе во времени')
     ax.grid(True, alpha=0.3)
     ax.legend()
@@ -184,36 +148,42 @@ def plot_outlet_temperature(data, save_dir):
 
 
 # ============================================================
-# 6. ГРАФИК 4: КОЭФФИЦИЕНТЫ ТЕПЛООТДАЧИ В ЦЕНТРЕ ВО ВРЕМЕНИ
+# 5. РАСЧЁТ ТЕПЛОВОЙ МОЩНОСТИ
 # ============================================================
 
-def plot_center_alpha(data, save_dir):
+def compute_performance(data, N1, G_hot, G_cold, cph, cpc):
+    """ Расчёт по ПОСЛЕДНЕМУ временному слою. Индексы:
+        CH1 (горячий): вход = N1-1, выход = 0
+        CH2 (холодный): вход = 0,   выход = N1-1
     """
-    Изменение коэффициента теплоотдачи во времени в ЦЕНТРЕ каналов.
-    Центр — ячейка с индексом N1//2.
-    """
-    i_mid = N1 // 2
-    t = data['time']
+    idx = len(data['time']) - 1
+    i_hot_in,  i_hot_out  = N1-1, 0
+    i_cold_in, i_cold_out = 0,   N1-1
 
-    fig, ax = plt.subplots(figsize=(10, 6))
-    ax.plot(t, data['ALW_in'][:, i_mid],  '-',  lw=2.0,
-            label=r'$\alpha$ внутр. поверхности (в центре)')
-    ax.plot(t, data['ALW_out'][:, i_mid], '--', lw=2.0,
-            label=r'$\alpha$ наружн. поверхности (в центре)')
+    T_hot_in  = data['T_hot'][idx, i_hot_in]
+    T_hot_out = data['T_hot'][idx, i_hot_out]
+    T_cold_in = data['T_cold'][idx, i_cold_in]
+    T_cold_out= data['T_cold'][idx, i_cold_out]
 
-    ax.set_xlabel('Время, с')
-    ax.set_ylabel(r'$\alpha$, Вт/(м$^2\cdot$К)')
-    ax.set_title('Изменение коэффициентов теплоотдачи в центре каналов во времени')
-    ax.grid(True, alpha=0.3)
-    ax.legend()
-    plt.tight_layout()
-    fig.savefig(os.path.join(save_dir, '04_center_alpha_vs_time.png'), dpi=150)
-    plt.close(fig)
-    print("  Сохранён график: 04_center_alpha_vs_time.png")
+     # Тепловая мощность по горячему и холодному потокам
+    Q_hot  = G_hot  * cph * (T_hot_in  - T_hot_out)
+    Q_cold = G_cold * cpc * (T_cold_out - T_cold_in)
+
+    # Среднее значение и относительная невязка баланса
+    Q = 0.5 * (Q_hot + Q_cold)
+    Q_balance_error = abs(Q_hot - Q_cold) / max(abs(Q), 1e-12)
+
+    return {
+        'time': data['time'][idx],
+        'T_hot_in': T_hot_in, 'T_hot_out': T_hot_out,
+        'T_cold_in': T_cold_in, 'T_cold_out': T_cold_out,
+        'Q': Q, 'Q_hot': Q_hot, 'Q_cold': Q_cold,
+        'Q_balance_error': Q_balance_error,
+    }
 
 
 # ============================================================
-# 7. ОСНОВНАЯ ПРОГРАММА
+# 6. ОСНОВНАЯ ПРОГРАММА
 # ============================================================
 
 def main():
@@ -231,26 +201,54 @@ def main():
     data = load_data(abs_path, N1)
     print(f"Время: от {data['time'][0]:.3f} до {data['time'][-1]:.3f} с")
 
-    # ---- Определяем индекс "стационарного" среза ----
-    idx_stat = find_stationary_index(data, tol=STATIONARY_TOL)
+    # ---- График 1: температуры потоков и стенки ----
+    print("\nСтрою график 1: температуры потоков и стенки...")
+    plot_steady_temperature(data, L_total, results_dir)
 
-    # ---- График 1: температуры потоков и стенки в стационаре ----
-    print("\nСтрою график 1: температуры потоков и стенки (стационар)...")
-    plot_steady_temperature(data, idx_stat, L_total, results_dir)
-
-    # ---- График 2: коэффициенты теплоотдачи в стационаре ----
-    print("\nСтрою график 2: коэффициенты теплоотдачи (стационар)...")
-    plot_steady_alpha(data, idx_stat, L_total, results_dir)
+    # ---- График 2: коэффициенты теплоотдачи ----
+    print("\nСтрою график 2: коэффициенты теплоотдачи...")
+    plot_steady_alpha(data, L_total, results_dir)
 
     # ---- График 3: температуры на выходе во времени ----
     print("\nСтрою график 3: температуры на выходе во времени...")
     plot_outlet_temperature(data, results_dir)
 
-    # ---- График 4: коэффициенты теплоотдачи в центре во времени ----
-    print("\nСтрою график 4: коэффициенты теплоотдачи в центре во времени...")
-    plot_center_alpha(data, results_dir)
+    # ---- Интегральные показатели ----
+    perf = compute_performance(data, N1, G_hot=1.0, G_cold=1.0, cph=4180.0, cpc=4180.0)
 
-    print("\nГотово. Все графики в папке:")
+    # Вывод в консоль
+    print("\n" + "="*60)
+    print("ТЕПЛОВАЯ МОЩНОСТЬ (последний срез)")
+    print("="*60)
+    print(f"  Время последнего среза: {perf['time']:.3f} с")
+    print(f"  Вход горячего:   {perf['T_hot_in']  - T0_C:.3f} °C")
+    print(f"  Выход горячего:  {perf['T_hot_out'] - T0_C:.3f} °C")
+    print(f"  Вход холодного:  {perf['T_cold_in'] - T0_C:.3f} °C")
+    print(f"  Выход холодного: {perf['T_cold_out']- T0_C:.3f} °C")
+    print(f"  Q (по горячему): {perf['Q_hot']:.3f} Вт")
+    print(f"  Q (по холодному):{perf['Q_cold']:.3f} Вт")
+    print(f"  Q (среднее):     {perf['Q']:.3f} Вт")
+    print(f"  Невязка баланса: {perf['Q_balance_error']*100:.4f} %")
+
+    # ---- Сохранение в Q.txt ----
+    ntu_path = os.path.join(results_dir, 'Q.txt')
+    with open(ntu_path, 'w', encoding='utf-8') as f:
+        f.write("ТЕПЛОВАЯ МОЩНОСТЬ (последний срез)\n")
+        f.write("=" * 60 + "\n")
+        f.write(f"Файл данных: {abs_path}\n")
+        f.write(f"Время последнего среза: {perf['time']:.3f} с\n")
+        f.write("-" * 60 + "\n")
+        f.write(f"Вход горячего:   {perf['T_hot_in']  - T0_C:.3f} °C\n")
+        f.write(f"Выход горячего:  {perf['T_hot_out'] - T0_C:.3f} °C\n")
+        f.write(f"Вход холодного:  {perf['T_cold_in'] - T0_C:.3f} °C\n")
+        f.write(f"Выход холодного: {perf['T_cold_out']- T0_C:.3f} °C\n")
+        f.write("-" * 60 + "\n")
+        f.write(f"Q (по горячему): {perf['Q_hot']:.3f} Вт\n")
+        f.write(f"Q (по холодному):{perf['Q_cold']:.3f} Вт\n")
+        f.write(f"Q (среднее):     {perf['Q']:.3f} Вт\n")
+        f.write(f"Невязка баланса: {perf['Q_balance_error']*100:.4f} %\n")
+
+    print("\nГотово. Все результаты в папке:")
     print(f"  {results_dir}")
 
 

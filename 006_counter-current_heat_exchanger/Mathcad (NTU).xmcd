@@ -1,0 +1,1661 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?validation-md5-digest 19dd4b538a1c54532692c253421dc8aa?>
+<worksheet version="3.0.3" xmlns="http://schemas.mathsoft.com/worksheet30" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ws="http://schemas.mathsoft.com/worksheet30" xmlns:ml="http://schemas.mathsoft.com/math30" xmlns:u="http://schemas.mathsoft.com/units10" xmlns:p="http://schemas.mathsoft.com/provenance10">
+	<pointReleaseData/>
+	<metadata>
+		<generator>Mathcad Professional 14.1</generator>
+		<userData>
+			<title/>
+			<description/>
+			<author>Пользователь Windows</author>
+			<company>Parametric Technology Corporation</company>
+			<keywords/>
+			<revisedBy>Toy_Ghost@outlook.com</revisedBy>
+		</userData>
+		<identityInfo>
+			<revision>57</revision>
+			<documentID>24B33792-9E56-44A7-9F85-5D80EF451AFB</documentID>
+			<versionID>9DF2A530-CF73-443E-991B-54B77924C08C</versionID>
+			<parentVersionID>00000000-0000-0000-0000-000000000000</parentVersionID>
+			<branchID>00000000-0000-0000-0000-000000000000</branchID>
+		</identityInfo>
+	</metadata>
+	<settings>
+		<presentation>
+			<textRendering>
+				<textStyles>
+					<textStyle name="Normal">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="Heading 1">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Arial" font-charset="0" font-size="14" font-weight="bold" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="Heading 2">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Arial" font-charset="0" font-size="12" font-weight="bold" font-style="italic" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="Heading 3">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Arial" font-charset="0" font-size="12" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="Paragraph">
+						<blockAttr margin-left="0" margin-right="0" text-indent="21" text-align="left" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="List">
+						<blockAttr margin-left="14.25" margin-right="0" text-indent="-14.25" text-align="left" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="Indent">
+						<blockAttr margin-left="108" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="Title">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="center" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Times New Roman" font-charset="0" font-size="24" font-weight="bold" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="Subtitle" base-style="Title">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="center" list-style-type="inherit" tabs="inherit"/>
+						<inlineAttr font-family="Times New Roman" font-charset="0" font-size="18" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+				</textStyles>
+			</textRendering>
+			<mathRendering equation-color="#000">
+				<operators multiplication="narrow-dot" derivative="derivative" literal-subscript="large" definition="colon-equal" global-definition="triple-equal" local-definition="left-arrow" equality="bold-equal" symbolic-evaluation="right-arrow"/>
+				<mathStyles>
+					<mathStyle name="Variables" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="Constants" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="User 1" font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="User 2" font-family="Courier New" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="User 3" font-family="Arial" font-charset="0" font-size="10" font-weight="bold" font-style="normal" underline="false"/>
+					<mathStyle name="User 4" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="italic" underline="false"/>
+					<mathStyle name="User 5" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="User 6" font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="User 7" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="Math Text Font" font-family="Times New Roman" font-charset="0" font-size="14" font-weight="normal" font-style="normal" underline="false"/>
+				</mathStyles>
+				<dimensionNames mass="mass" length="length" time="time" current="current" thermodynamic-temperature="temperature" luminous-intensity="luminosity" amount-of-substance="substance" display="false"/>
+				<symbolics derivation-steps-style="vertical-insert" show-comments="false" evaluate-in-place="false"/>
+				<results numeric-only="true">
+					<general precision="3" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i" exponential-threshold="3"/>
+					<matrix display-style="auto" expand-nested-arrays="false"/>
+					<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
+				</results>
+			</mathRendering>
+			<pageModel show-page-frame="false" show-header-frame="false" show-footer-frame="false" header-footer-start-page="1" paper-code="1" orientation="portrait" print-single-page-width="false" page-width="612" page-height="792">
+				<margins left="86.4" right="86.4" top="86.4" bottom="86.4"/>
+				<header use-full-page-width="false"/>
+				<footer use-full-page-width="false"/>
+			</pageModel>
+			<colorModel background-color="#fff" default-highlight-color="#ffff80"/>
+			<language math="ru" UI="ru"/>
+		</presentation>
+		<calculation>
+			<builtInVariables array-origin="0" convergence-tolerance="0.001" constraint-tolerance="0.001" random-seed="1" prn-precision="4" prn-col-width="8"/>
+			<calculationBehavior automatic-recalculation="true" matrix-strict-singularity-check="false" optimize-expressions="false" exact-boolean="true" strings-use-origin="false" zero-over-zero="error">
+				<compatibility multiple-assignment="MC12" local-assignment="MC11"/>
+			</calculationBehavior>
+			<units>
+				<currentUnitSystem name="si" customized="false"/>
+			</units>
+		</calculation>
+		<editor view-annotations="false" view-regions="false">
+			<ruler is-visible="false" ruler-unit="in"/>
+			<grid granularity-x="6" granularity-y="6"/>
+		</editor>
+		<fileFormat image-type="image/png" image-quality="75" save-numeric-results="true" exclude-large-results="true" save-text-images="false" screen-dpi="96"/>
+		<miscellaneous>
+			<handbook handbook-region-tag-ub="1341" can-delete-original-handbook-regions="true" can-delete-user-regions="true" can-print="true" can-copy="true" can-save="true" file-permission-mask="4294967295"/>
+		</miscellaneous>
+	</settings>
+	<regions>
+		<region region-id="2" left="12" top="8.25" width="150" height="12" align-x="31.5" align-y="18" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<text use-page-width="false" push-down="false" lock-width="false">
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<b>Метод водяных эквивалентов</b>
+				</p>
+			</text>
+		</region>
+		<region region-id="3575" left="0" top="27" width="6008.25" align-x="0" align-y="27" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="128.25">
+			<area is-collapsed="true" name="Исходные данные для теплового расчета" show-name="true" show-border="true" show-icon="true" show-timestamp="true" allow-expand="false" is-locked="false" timestamp="" top-lock-id="598" bottom-lock-id="3434">
+				<region region-id="3182" left="12" top="17.25" width="45.75" height="18.75" align-x="28.5" align-y="32.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">P0</ml:id>
+							<ml:apply>
+								<ml:mult/>
+								<ml:real>1</ml:real>
+								<ml:apply>
+									<ml:pow/>
+									<ml:real>10</ml:real>
+									<ml:real>5</ml:real>
+								</ml:apply>
+							</ml:apply>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3173" left="12" top="47.25" width="36" height="12.75" align-x="30.75" align-y="56.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">t1c</ml:id>
+							<ml:real>20</ml:real>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3171" left="222" top="47.25" width="37.5" height="12.75" align-x="242.25" align-y="56.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">t1h</ml:id>
+							<ml:real>95</ml:real>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3177" left="12" top="71.25" width="51.75" height="12.75" align-x="30.75" align-y="80.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">t2c</ml:id>
+							<ml:real>53.904</ml:real>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3175" left="222" top="71.25" width="53.25" height="12.75" align-x="242.25" align-y="80.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">t2h</ml:id>
+							<ml:real>61.219</ml:real>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3198" left="12" top="95.25" width="31.5" height="12.75" align-x="30.75" align-y="104.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Gh</ml:id>
+							<ml:real>1</ml:real>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3199" left="108" top="95.25" width="30" height="12.75" align-x="125.25" align-y="104.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Gc</ml:id>
+							<ml:real>1</ml:real>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3209" left="222" top="95.25" width="42.75" height="12.75" align-x="238.5" align-y="104.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">cp</ml:id>
+							<ml:real>4180</ml:real>
+						</ml:define>
+					</math>
+				</region>
+			</area>
+			<rendering item-idref="1"/>
+		</region>
+		<region region-id="3546" left="0" top="57.75" width="6008.25" align-x="0" align-y="57.75" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="68.25">
+			<area is-collapsed="true" name="Исходные данные для труб (диаметры)" show-name="true" show-border="true" show-icon="true" show-timestamp="true" allow-expand="false" is-locked="false" timestamp="" top-lock-id="1988" bottom-lock-id="3221">
+				<region region-id="3225" left="12" top="15" width="45.75" height="12.75" align-x="29.25" align-y="24" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">dн</ml:id>
+							<ml:real>0.012</ml:real>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3235" left="120" top="15" width="38.25" height="12.75" align-x="141" align-y="24" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">nтр</ml:id>
+							<ml:real>20</ml:real>
+						</ml:define>
+						<resultFormat numeric-only="true">
+							<general precision="5" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i" exponential-threshold="3"/>
+							<matrix display-style="auto" expand-nested-arrays="false"/>
+							<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
+						</resultFormat>
+					</math>
+				</region>
+				<region region-id="3412" left="228" top="15" width="30.75" height="12.75" align-x="246" align-y="24" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">lтр</ml:id>
+							<ml:real>3</ml:real>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3226" left="12" top="33" width="45.75" height="12.75" align-x="33.75" align-y="42" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">dвн</ml:id>
+							<ml:real>0.01</ml:real>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3236" left="120" top="33" width="40.5" height="12.75" align-x="136.5" align-y="42" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">ds</ml:id>
+							<ml:real>0.08</ml:real>
+						</ml:define>
+					</math>
+				</region>
+			</area>
+			<rendering item-idref="2"/>
+		</region>
+		<region region-id="3523" left="0" top="87.75" width="6008.25" align-x="0" align-y="87.75" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="206.25">
+			<area is-collapsed="true" name="Проходные сечения" show-name="true" show-border="true" show-icon="true" show-timestamp="true" allow-expand="false" is-locked="false" timestamp="" top-lock-id="3222" bottom-lock-id="3349">
+				<region region-id="3511" left="12" top="8.25" width="143.25" height="33.75" align-x="27" align-y="30" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">f1</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:mult/>
+									<ml:apply>
+										<ml:mult/>
+										<ml:id xml:space="preserve">nтр</ml:id>
+										<ml:id xml:space="preserve">π</ml:id>
+									</ml:apply>
+									<ml:apply>
+										<ml:div/>
+										<ml:apply>
+											<ml:pow/>
+											<ml:id xml:space="preserve">dвн</ml:id>
+											<ml:real>2</ml:real>
+										</ml:apply>
+										<ml:real>4</ml:real>
+									</ml:apply>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>0.0015707963267948967</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3512" left="12" top="44.25" width="183" height="33.75" align-x="27" align-y="66" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">f2</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:apply>
+										<ml:mult style="auto-select"/>
+										<ml:id xml:space="preserve">π</ml:id>
+										<ml:parens>
+											<ml:apply>
+												<ml:minus/>
+												<ml:apply>
+													<ml:pow/>
+													<ml:parens>
+														<ml:id xml:space="preserve">ds</ml:id>
+													</ml:parens>
+													<ml:real>2</ml:real>
+												</ml:apply>
+												<ml:apply>
+													<ml:mult style="auto-select"/>
+													<ml:id xml:space="preserve">nтр</ml:id>
+													<ml:apply>
+														<ml:pow/>
+														<ml:parens>
+															<ml:id xml:space="preserve">dн</ml:id>
+														</ml:parens>
+														<ml:real>2</ml:real>
+													</ml:apply>
+												</ml:apply>
+											</ml:apply>
+										</ml:parens>
+									</ml:apply>
+									<ml:real>4</ml:real>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>0.002764601535159018</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3513" left="12" top="99" width="77.25" height="12.75" align-x="32.25" align-y="108" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">dг1</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:id xml:space="preserve">dвн</ml:id>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>0.01</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3347" left="12" top="141" width="126.75" height="12.75" align-x="25.5" align-y="150" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">П</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:mult/>
+									<ml:id xml:space="preserve">π</ml:id>
+									<ml:parens>
+										<ml:apply>
+											<ml:plus/>
+											<ml:id xml:space="preserve">ds</ml:id>
+											<ml:apply>
+												<ml:mult/>
+												<ml:id xml:space="preserve">dн</ml:id>
+												<ml:id xml:space="preserve">nтр</ml:id>
+											</ml:apply>
+										</ml:apply>
+									</ml:parens>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>1.0053096491487339</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3348" left="12" top="152.25" width="136.5" height="27.75" align-x="32.25" align-y="168" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">dг2</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:apply>
+										<ml:mult style="auto-select"/>
+										<ml:real>4</ml:real>
+										<ml:id xml:space="preserve">f2</ml:id>
+									</ml:apply>
+									<ml:apply>
+										<ml:mult/>
+										<ml:id xml:space="preserve">π</ml:id>
+										<ml:parens>
+											<ml:apply>
+												<ml:plus/>
+												<ml:id xml:space="preserve">ds</ml:id>
+												<ml:apply>
+													<ml:mult/>
+													<ml:id xml:space="preserve">dн</ml:id>
+													<ml:id xml:space="preserve">nтр</ml:id>
+												</ml:apply>
+											</ml:apply>
+										</ml:parens>
+									</ml:apply>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>0.011</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+			</area>
+			<rendering item-idref="3"/>
+		</region>
+		<region region-id="3580" left="0" top="135" width="6008.25" align-x="0" align-y="135" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="650.25">
+			<area is-collapsed="true" name="Определение коэффициента теплопередачи" show-name="true" show-border="true" show-icon="true" show-timestamp="true" allow-expand="false" is-locked="false" timestamp="" top-lock-id="1002" bottom-lock-id="3425">
+				<region region-id="3399" left="12" top="16.5" width="115.5" height="27.75" align-x="34.5" align-y="32.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Tср</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:apply>
+										<ml:plus/>
+										<ml:id xml:space="preserve">t1h</ml:id>
+										<ml:id xml:space="preserve">t2h</ml:id>
+									</ml:apply>
+									<ml:real>2</ml:real>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>78.1095</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3400" left="228" top="16.5" width="109.5" height="27.75" align-x="247.5" align-y="32.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">tср</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:apply>
+										<ml:plus/>
+										<ml:id xml:space="preserve">t1c</ml:id>
+										<ml:id xml:space="preserve">t2c</ml:id>
+									</ml:apply>
+									<ml:real>2</ml:real>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>36.952</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3487" left="444" top="16.5" width="115.5" height="27.75" align-x="465" align-y="32.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Tст</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:apply>
+										<ml:plus/>
+										<ml:id xml:space="preserve">Tср</ml:id>
+										<ml:id xml:space="preserve">tср</ml:id>
+									</ml:apply>
+									<ml:real>2</ml:real>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>57.53075</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3489" left="444" top="53.25" width="38.25" height="12.75" align-x="465" align-y="62.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">λст</ml:id>
+							<ml:real>42</ml:real>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3381" left="12" top="65.25" width="186.75" height="12.75" align-x="29.25" align-y="74.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">λ1</ml:id>
+							<ml:apply>
+								<ml:id xml:space="preserve">wspTHERMCONDPT</ml:id>
+								<ml:sequence>
+									<ml:id xml:space="preserve">P0</ml:id>
+									<ml:apply>
+										<ml:plus/>
+										<ml:id xml:space="preserve">Tср</ml:id>
+										<ml:real>273.15</ml:real>
+									</ml:apply>
+								</ml:sequence>
+							</ml:apply>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3382" left="228" top="65.25" width="183.75" height="12.75" align-x="245.25" align-y="74.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">λ2</ml:id>
+							<ml:apply>
+								<ml:id xml:space="preserve">wspTHERMCONDPT</ml:id>
+								<ml:sequence>
+									<ml:id xml:space="preserve">P0</ml:id>
+									<ml:apply>
+										<ml:plus/>
+										<ml:id xml:space="preserve">tср</ml:id>
+										<ml:real>273.15</ml:real>
+									</ml:apply>
+								</ml:sequence>
+							</ml:apply>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3383" left="12" top="82.5" width="183" height="27.75" align-x="28.5" align-y="98.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">ρ1</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:real>1</ml:real>
+									<ml:apply>
+										<ml:id xml:space="preserve">wspVPT</ml:id>
+										<ml:sequence>
+											<ml:id xml:space="preserve">P0</ml:id>
+											<ml:apply>
+												<ml:plus/>
+												<ml:id xml:space="preserve">Tср</ml:id>
+												<ml:real>273.15</ml:real>
+											</ml:apply>
+										</ml:sequence>
+									</ml:apply>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>972.97206282402453</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3384" left="228" top="82.5" width="180" height="27.75" align-x="244.5" align-y="98.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">ρ2</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:real>1</ml:real>
+									<ml:apply>
+										<ml:id xml:space="preserve">wspVPT</ml:id>
+										<ml:sequence>
+											<ml:id xml:space="preserve">P0</ml:id>
+											<ml:apply>
+												<ml:plus/>
+												<ml:id xml:space="preserve">tср</ml:id>
+												<ml:real>273.15</ml:real>
+											</ml:apply>
+										</ml:sequence>
+									</ml:apply>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>993.35271673107809</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3385" left="12" top="119.25" width="158.25" height="12.75" align-x="29.25" align-y="128.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">ν1</ml:id>
+							<ml:apply>
+								<ml:id xml:space="preserve">wspKINVISPT</ml:id>
+								<ml:sequence>
+									<ml:id xml:space="preserve">P0</ml:id>
+									<ml:apply>
+										<ml:plus/>
+										<ml:id xml:space="preserve">Tср</ml:id>
+										<ml:real>273.15</ml:real>
+									</ml:apply>
+								</ml:sequence>
+							</ml:apply>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3386" left="228" top="119.25" width="155.25" height="12.75" align-x="245.25" align-y="128.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">ν2</ml:id>
+							<ml:apply>
+								<ml:id xml:space="preserve">wspKINVISPT</ml:id>
+								<ml:sequence>
+									<ml:id xml:space="preserve">P0</ml:id>
+									<ml:apply>
+										<ml:plus/>
+										<ml:id xml:space="preserve">tср</ml:id>
+										<ml:real>273.15</ml:real>
+									</ml:apply>
+								</ml:sequence>
+							</ml:apply>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3387" left="12" top="137.25" width="185.25" height="12.75" align-x="38.25" align-y="146.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Pr1ж</ml:id>
+							<ml:apply>
+								<ml:id xml:space="preserve">wspPRANDTLEPT</ml:id>
+								<ml:sequence>
+									<ml:id xml:space="preserve">P0</ml:id>
+									<ml:apply>
+										<ml:plus/>
+										<ml:id xml:space="preserve">Tср</ml:id>
+										<ml:real>273.15</ml:real>
+									</ml:apply>
+								</ml:sequence>
+							</ml:apply>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3388" left="228" top="137.25" width="182.25" height="12.75" align-x="254.25" align-y="146.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Pr2ж</ml:id>
+							<ml:apply>
+								<ml:id xml:space="preserve">wspPRANDTLEPT</ml:id>
+								<ml:sequence>
+									<ml:id xml:space="preserve">P0</ml:id>
+									<ml:apply>
+										<ml:plus/>
+										<ml:id xml:space="preserve">tср</ml:id>
+										<ml:real>273.15</ml:real>
+									</ml:apply>
+								</ml:sequence>
+							</ml:apply>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3389" left="12" top="155.25" width="185.25" height="12.75" align-x="39.75" align-y="164.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Pr1ст</ml:id>
+							<ml:apply>
+								<ml:id xml:space="preserve">wspPRANDTLEPT</ml:id>
+								<ml:sequence>
+									<ml:id xml:space="preserve">P0</ml:id>
+									<ml:apply>
+										<ml:plus/>
+										<ml:id xml:space="preserve">Tст</ml:id>
+										<ml:real>273.15</ml:real>
+									</ml:apply>
+								</ml:sequence>
+							</ml:apply>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3390" left="228" top="155.25" width="185.25" height="12.75" align-x="255.75" align-y="164.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Pr2ст</ml:id>
+							<ml:apply>
+								<ml:id xml:space="preserve">wspPRANDTLEPT</ml:id>
+								<ml:sequence>
+									<ml:id xml:space="preserve">P0</ml:id>
+									<ml:apply>
+										<ml:plus/>
+										<ml:id xml:space="preserve">Tст</ml:id>
+										<ml:real>273.15</ml:real>
+									</ml:apply>
+								</ml:sequence>
+							</ml:apply>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3474" left="12" top="173.25" width="195.75" height="12.75" align-x="34.5" align-y="182.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">cph</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:id xml:space="preserve">wspCPPT</ml:id>
+									<ml:sequence>
+										<ml:id xml:space="preserve">P0</ml:id>
+										<ml:apply>
+											<ml:plus/>
+											<ml:id xml:space="preserve">Tср</ml:id>
+											<ml:real>273.15</ml:real>
+										</ml:apply>
+									</ml:sequence>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>4193.9560585109257</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+						<resultFormat numeric-only="true">
+							<decimal precision="3" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i"/>
+							<matrix display-style="auto" expand-nested-arrays="false"/>
+							<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
+						</resultFormat>
+					</math>
+				</region>
+				<region region-id="3479" left="228" top="173.25" width="186.75" height="12.75" align-x="249" align-y="182.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">cpc</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:id xml:space="preserve">wspCPPT</ml:id>
+									<ml:sequence>
+										<ml:id xml:space="preserve">P0</ml:id>
+										<ml:apply>
+											<ml:plus/>
+											<ml:id xml:space="preserve">tср</ml:id>
+											<ml:real>273.15</ml:real>
+										</ml:apply>
+									</ml:sequence>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>4178.720331448204</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+						<resultFormat numeric-only="true">
+							<decimal precision="3" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i"/>
+							<matrix display-style="auto" expand-nested-arrays="false"/>
+							<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
+						</resultFormat>
+					</math>
+				</region>
+				<region region-id="3465" left="12" top="202.5" width="88.5" height="27.75" align-x="30" align-y="218.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">w1</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:id xml:space="preserve">Gh</ml:id>
+									<ml:apply>
+										<ml:mult/>
+										<ml:id xml:space="preserve">f1</ml:id>
+										<ml:id xml:space="preserve">ρ1</ml:id>
+									</ml:apply>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>0.65430426698975308</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3466" left="12" top="232.5" width="130.5" height="27.75" align-x="33.75" align-y="248.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Re1</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:apply>
+										<ml:mult/>
+										<ml:id xml:space="preserve">w1</ml:id>
+										<ml:id xml:space="preserve">dг1</ml:id>
+									</ml:apply>
+									<ml:id xml:space="preserve">ν1</ml:id>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>17542.563155577907</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+						<resultFormat numeric-only="true">
+							<decimal precision="6" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i"/>
+							<matrix display-style="auto" expand-nested-arrays="false"/>
+							<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
+						</resultFormat>
+					</math>
+				</region>
+				<region region-id="3467" left="12" top="262.5" width="219" height="33.75" align-x="36" align-y="284.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Nu1</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:mult/>
+									<ml:apply>
+										<ml:mult style="auto-select"/>
+										<ml:apply>
+											<ml:mult/>
+											<ml:real>0.021</ml:real>
+											<ml:apply>
+												<ml:pow/>
+												<ml:id xml:space="preserve">Re1</ml:id>
+												<ml:real>0.8</ml:real>
+											</ml:apply>
+										</ml:apply>
+										<ml:apply>
+											<ml:pow/>
+											<ml:id xml:space="preserve">Pr1ж</ml:id>
+											<ml:real>0.43</ml:real>
+										</ml:apply>
+									</ml:apply>
+									<ml:apply>
+										<ml:pow/>
+										<ml:parens>
+											<ml:apply>
+												<ml:div/>
+												<ml:id xml:space="preserve">Pr1ж</ml:id>
+												<ml:id xml:space="preserve">Pr1ст</ml:id>
+											</ml:apply>
+										</ml:parens>
+										<ml:real>0.25</ml:real>
+									</ml:apply>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>68.870532042926726</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+						<resultFormat numeric-only="true">
+							<decimal precision="4" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i"/>
+							<matrix display-style="auto" expand-nested-arrays="false"/>
+							<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
+						</resultFormat>
+					</math>
+				</region>
+				<region region-id="3468" left="12" top="292.5" width="111" height="27.75" align-x="29.25" align-y="308.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">α1</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:apply>
+										<ml:mult/>
+										<ml:id xml:space="preserve">Nu1</ml:id>
+										<ml:id xml:space="preserve">λ1</ml:id>
+									</ml:apply>
+									<ml:id xml:space="preserve">dг1</ml:id>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>4584.7226722352634</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+						<resultFormat numeric-only="true">
+							<decimal precision="3" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i"/>
+							<matrix display-style="auto" expand-nested-arrays="false"/>
+							<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
+						</resultFormat>
+					</math>
+				</region>
+				<region region-id="3469" left="12" top="340.5" width="88.5" height="27.75" align-x="30" align-y="356.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">w2</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:id xml:space="preserve">Gc</ml:id>
+									<ml:apply>
+										<ml:mult/>
+										<ml:id xml:space="preserve">f2</ml:id>
+										<ml:id xml:space="preserve">ρ2</ml:id>
+									</ml:apply>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>0.364136296868086</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3470" left="12" top="370.5" width="126" height="27.75" align-x="33.75" align-y="386.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Re2</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:apply>
+										<ml:mult/>
+										<ml:id xml:space="preserve">w2</ml:id>
+										<ml:id xml:space="preserve">dг2</ml:id>
+									</ml:apply>
+									<ml:id xml:space="preserve">ν2</ml:id>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>5748.4464024049012</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+						<resultFormat numeric-only="true">
+							<decimal precision="6" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i"/>
+							<matrix display-style="auto" expand-nested-arrays="false"/>
+							<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
+						</resultFormat>
+					</math>
+				</region>
+				<region region-id="3471" left="12" top="400.5" width="210" height="33.75" align-x="36" align-y="422.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Nu2</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:mult/>
+									<ml:apply>
+										<ml:mult style="auto-select"/>
+										<ml:apply>
+											<ml:mult/>
+											<ml:real>0.023</ml:real>
+											<ml:apply>
+												<ml:pow/>
+												<ml:id xml:space="preserve">Re2</ml:id>
+												<ml:real>0.8</ml:real>
+											</ml:apply>
+										</ml:apply>
+										<ml:apply>
+											<ml:pow/>
+											<ml:id xml:space="preserve">Pr2ж</ml:id>
+											<ml:real>0.4</ml:real>
+										</ml:apply>
+									</ml:apply>
+									<ml:apply>
+										<ml:pow/>
+										<ml:parens>
+											<ml:apply>
+												<ml:div/>
+												<ml:id xml:space="preserve">Pr2ж</ml:id>
+												<ml:id xml:space="preserve">Pr2ст</ml:id>
+											</ml:apply>
+										</ml:parens>
+										<ml:real>0.25</ml:real>
+									</ml:apply>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>47.681215167466256</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3472" left="12" top="436.5" width="115.5" height="27.75" align-x="29.25" align-y="452.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">α2</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:apply>
+										<ml:mult/>
+										<ml:id xml:space="preserve">Nu2</ml:id>
+										<ml:id xml:space="preserve">λ2</ml:id>
+									</ml:apply>
+									<ml:id xml:space="preserve">dг2</ml:id>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>2707.6606514553487</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+						<resultFormat numeric-only="true">
+							<decimal precision="4" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i"/>
+							<matrix display-style="auto" expand-nested-arrays="false"/>
+							<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
+						</resultFormat>
+					</math>
+				</region>
+				<region region-id="3457" left="12" top="484.5" width="168.75" height="27.75" align-x="29.25" align-y="500.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">R1</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:real>1</ml:real>
+									<ml:apply>
+										<ml:mult/>
+										<ml:apply>
+											<ml:mult/>
+											<ml:apply>
+												<ml:mult/>
+												<ml:apply>
+													<ml:mult/>
+													<ml:id xml:space="preserve">α1</ml:id>
+													<ml:id xml:space="preserve">π</ml:id>
+												</ml:apply>
+												<ml:id xml:space="preserve">dвн</ml:id>
+											</ml:apply>
+											<ml:id xml:space="preserve">lтр</ml:id>
+										</ml:apply>
+										<ml:id xml:space="preserve">nтр</ml:id>
+									</ml:apply>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>0.00011571397331964103</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3528" left="186" top="484.5" width="164.25" height="27.75" align-x="203.25" align-y="500.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">R2</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:real>1</ml:real>
+									<ml:apply>
+										<ml:mult/>
+										<ml:apply>
+											<ml:mult/>
+											<ml:apply>
+												<ml:mult/>
+												<ml:apply>
+													<ml:mult/>
+													<ml:id xml:space="preserve">α2</ml:id>
+													<ml:id xml:space="preserve">π</ml:id>
+												</ml:apply>
+												<ml:id xml:space="preserve">dн</ml:id>
+											</ml:apply>
+											<ml:id xml:space="preserve">lтр</ml:id>
+										</ml:apply>
+										<ml:id xml:space="preserve">nтр</ml:id>
+									</ml:apply>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>0.0001632763928177372</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3459" left="12" top="517.5" width="162.75" height="42.75" align-x="33" align-y="548.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Rст</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:apply>
+										<ml:id xml:space="preserve">ln</ml:id>
+										<ml:apply>
+											<ml:div/>
+											<ml:id xml:space="preserve">dн</ml:id>
+											<ml:id xml:space="preserve">dвн</ml:id>
+										</ml:apply>
+									</ml:apply>
+									<ml:apply>
+										<ml:mult/>
+										<ml:apply>
+											<ml:mult/>
+											<ml:apply>
+												<ml:mult/>
+												<ml:apply>
+													<ml:mult style="auto-select"/>
+													<ml:real>2</ml:real>
+													<ml:id xml:space="preserve">π</ml:id>
+												</ml:apply>
+												<ml:id xml:space="preserve">λст</ml:id>
+											</ml:apply>
+											<ml:id xml:space="preserve">nтр</ml:id>
+										</ml:apply>
+										<ml:id xml:space="preserve">lтр</ml:id>
+									</ml:apply>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>1.1514832141256987E-05</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3460" left="12" top="563.25" width="174" height="18.75" align-x="48" align-y="578.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Rсумм</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:plus/>
+									<ml:apply>
+										<ml:plus/>
+										<ml:id xml:space="preserve">R1</ml:id>
+										<ml:id xml:space="preserve">R2</ml:id>
+									</ml:apply>
+									<ml:id xml:space="preserve">Rст</ml:id>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>0.00029050519827863525</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3461" left="12" top="592.5" width="117.75" height="27.75" align-x="26.25" align-y="608.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define warning="WarnRedefinedBIUnit" xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">K</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:real>1</ml:real>
+									<ml:id xml:space="preserve">Rсумм</ml:id>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>3442.2791947456294</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+			</area>
+			<rendering item-idref="4"/>
+		</region>
+		<region region-id="3579" left="0" top="174.75" width="6008.25" align-x="0" align-y="174.75" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="248.25">
+			<area is-collapsed="true" name="Водяные эквиваленты, NTU" show-name="true" show-border="true" show-icon="true" show-timestamp="true" allow-expand="false" is-locked="false" timestamp="" top-lock-id="3441" bottom-lock-id="3538">
+				<region region-id="3494" left="12" top="11.25" width="100.5" height="12.75" align-x="29.25" align-y="20.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Cc</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:mult/>
+									<ml:id xml:space="preserve">Gc</ml:id>
+									<ml:id xml:space="preserve">cpc</ml:id>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>4178.720331448204</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+						<resultFormat numeric-only="true">
+							<decimal precision="3" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i"/>
+							<matrix display-style="auto" expand-nested-arrays="false"/>
+							<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
+						</resultFormat>
+					</math>
+				</region>
+				<region region-id="3495" left="12" top="29.25" width="109.5" height="12.75" align-x="30.75" align-y="38.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Ch</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:mult/>
+									<ml:id xml:space="preserve">Gh</ml:id>
+									<ml:id xml:space="preserve">cph</ml:id>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>4193.9560585109257</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+						<resultFormat numeric-only="true">
+							<decimal precision="3" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i"/>
+							<matrix display-style="auto" expand-nested-arrays="false"/>
+							<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
+						</resultFormat>
+					</math>
+				</region>
+				<region region-id="3499" left="12" top="53.25" width="147" height="18.75" align-x="39" align-y="68.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Cmin</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:id xml:space="preserve">min</ml:id>
+									<ml:sequence>
+										<ml:id xml:space="preserve">Cc</ml:id>
+										<ml:id xml:space="preserve">Ch</ml:id>
+									</ml:sequence>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>4178.720331448204</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3500" left="12" top="71.25" width="148.5" height="18.75" align-x="39.75" align-y="86.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Cmax</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:id xml:space="preserve">max</ml:id>
+									<ml:sequence>
+										<ml:id xml:space="preserve">Cc</ml:id>
+										<ml:id xml:space="preserve">Ch</ml:id>
+									</ml:sequence>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>4193.9560585109257</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3502" left="12" top="106.5" width="87" height="27.75" align-x="28.5" align-y="122.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Cr</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:id xml:space="preserve">Cmin</ml:id>
+									<ml:id xml:space="preserve">Cmax</ml:id>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>0.99636721824211694</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3503" left="12" top="142.5" width="96.75" height="27.75" align-x="39" align-y="158.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">NTU</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:id xml:space="preserve">K</ml:id>
+									<ml:id xml:space="preserve">Cmin</ml:id>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>0.82376395683619519</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3507" left="12" top="172.5" width="153.75" height="39.75" align-x="24.75" align-y="194.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define warning="WarnRedefinedBIFunction" xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">ε</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:apply>
+										<ml:minus/>
+										<ml:real>1</ml:real>
+										<ml:apply>
+											<ml:pow/>
+											<ml:id xml:space="preserve">e</ml:id>
+											<ml:apply>
+												<ml:mult/>
+												<ml:apply>
+													<ml:neg/>
+													<ml:id xml:space="preserve">NTU</ml:id>
+												</ml:apply>
+												<ml:parens>
+													<ml:apply>
+														<ml:minus/>
+														<ml:real>1</ml:real>
+														<ml:id xml:space="preserve">Cr</ml:id>
+													</ml:apply>
+												</ml:parens>
+											</ml:apply>
+										</ml:apply>
+									</ml:apply>
+									<ml:apply>
+										<ml:minus/>
+										<ml:real>1</ml:real>
+										<ml:apply>
+											<ml:mult/>
+											<ml:id xml:space="preserve">Cr</ml:id>
+											<ml:apply>
+												<ml:pow/>
+												<ml:id xml:space="preserve">e</ml:id>
+												<ml:apply>
+													<ml:mult/>
+													<ml:apply>
+														<ml:neg/>
+														<ml:id xml:space="preserve">NTU</ml:id>
+													</ml:apply>
+													<ml:parens>
+														<ml:apply>
+															<ml:minus/>
+															<ml:real>1</ml:real>
+															<ml:id xml:space="preserve">Cr</ml:id>
+														</ml:apply>
+													</ml:parens>
+												</ml:apply>
+											</ml:apply>
+										</ml:apply>
+									</ml:apply>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>0.45205412396003114</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+			</area>
+			<rendering item-idref="5"/>
+		</region>
+		<region region-id="3578" left="0" top="203.25" width="6008.25" align-x="0" align-y="203.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="333.75">
+			<area is-collapsed="true" name="Тепловая мощность и конечные температуры" show-name="true" show-border="true" show-icon="true" show-timestamp="true" allow-expand="false" is-locked="false" timestamp="" top-lock-id="3564" bottom-lock-id="3576">
+				<region region-id="3543" left="12" top="23.25" width="159.75" height="12.75" align-x="25.5" align-y="32.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Q</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:mult/>
+									<ml:apply>
+										<ml:mult/>
+										<ml:id xml:space="preserve">ε</ml:id>
+										<ml:id xml:space="preserve">Cmin</ml:id>
+									</ml:apply>
+									<ml:parens>
+										<ml:apply>
+											<ml:minus/>
+											<ml:id xml:space="preserve">t1h</ml:id>
+											<ml:id xml:space="preserve">t1c</ml:id>
+										</ml:apply>
+									</ml:parens>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>141675.58190300915</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+						<resultFormat numeric-only="true">
+							<decimal precision="3" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i"/>
+							<matrix display-style="auto" expand-nested-arrays="false"/>
+							<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
+						</resultFormat>
+					</math>
+				</region>
+				<region region-id="3544" left="12" top="52.5" width="111.75" height="27.75" align-x="32.25" align-y="68.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define warning="WarnRedefinedUDScalar" xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">t2h</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:minus/>
+									<ml:id xml:space="preserve">t1h</ml:id>
+									<ml:apply>
+										<ml:div/>
+										<ml:id xml:space="preserve">Q</ml:id>
+										<ml:id xml:space="preserve">Ch</ml:id>
+									</ml:apply>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>61.219106751130006</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3545" left="12" top="82.5" width="107.25" height="27.75" align-x="30.75" align-y="98.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define warning="WarnRedefinedUDScalar" xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">t2c</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:plus/>
+									<ml:id xml:space="preserve">t1c</ml:id>
+									<ml:apply>
+										<ml:div/>
+										<ml:id xml:space="preserve">Q</ml:id>
+										<ml:id xml:space="preserve">Cc</ml:id>
+									</ml:apply>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>53.904059297002334</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3547" left="12" top="137.25" width="117" height="12.75" align-x="39" align-y="146.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">ΔTh</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:minus/>
+									<ml:id xml:space="preserve">t1h</ml:id>
+									<ml:id xml:space="preserve">t2h</ml:id>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>33.780893248869994</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3563" left="12" top="155.25" width="112.5" height="12.75" align-x="37.5" align-y="164.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">ΔTc</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:minus/>
+									<ml:id xml:space="preserve">t2c</ml:id>
+									<ml:id xml:space="preserve">t1c</ml:id>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>33.904059297002334</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3555" left="12" top="191.25" width="151.5" height="12.75" align-x="47.25" align-y="200.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">ΔTmin</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:id xml:space="preserve">min</ml:id>
+									<ml:sequence>
+										<ml:id xml:space="preserve">ΔTh</ml:id>
+										<ml:id xml:space="preserve">ΔTc</ml:id>
+									</ml:sequence>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>33.780893248869994</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3558" left="12" top="209.25" width="153" height="12.75" align-x="48" align-y="218.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">ΔTmax</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:id xml:space="preserve">max</ml:id>
+									<ml:sequence>
+										<ml:id xml:space="preserve">ΔTh</ml:id>
+										<ml:id xml:space="preserve">ΔTc</ml:id>
+									</ml:sequence>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>33.904059297002334</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3559" left="12" top="250.5" width="152.25" height="42.75" align-x="40.5" align-y="266.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">ΔTlg</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:div/>
+									<ml:apply>
+										<ml:minus/>
+										<ml:id xml:space="preserve">ΔTmax</ml:id>
+										<ml:id xml:space="preserve">ΔTmin</ml:id>
+									</ml:apply>
+									<ml:apply>
+										<ml:id xml:space="preserve">ln</ml:id>
+										<ml:apply>
+											<ml:div/>
+											<ml:id xml:space="preserve">ΔTmax</ml:id>
+											<ml:id xml:space="preserve">ΔTmin</ml:id>
+										</ml:apply>
+									</ml:apply>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>33.842438918773304</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="3573" left="12" top="301.5" width="124.5" height="12.75" align-x="35.25" align-y="310.5" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Qalt</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:mult/>
+									<ml:id xml:space="preserve">K</ml:id>
+									<ml:id xml:space="preserve">ΔTlg</ml:id>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>116495.12338954312</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
+						<resultFormat numeric-only="true">
+							<decimal precision="3" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i"/>
+							<matrix display-style="auto" expand-nested-arrays="false"/>
+							<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
+						</resultFormat>
+					</math>
+				</region>
+			</area>
+			<rendering item-idref="6"/>
+		</region>
+	</regions>
+	<binaryContent>
+		<item item-id="1">iVBORw0KGgoAAAANSUhEUgAAH0sAAAAMCAYAAAAXHXAzAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVISURBVHhe7d3RcaQ4FAVQ4iIg4nAI
+HU0n08GwLVkCIZ7aeOyZHe+eU3WrkBBINv1/p6f1agAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACq6WoJurJ0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoPVrZemP2zrP
+t/VRhsnjNq9TNwcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8d53K0kfl6S/L0tP4
+eV9ZOgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPx/hGXpUWH6q7L0+zKty62du69L
+eU/Kcn8fz7fyRC5Xn9c8rEXrOcvzyV16b33HVsQeFbWncT9ftfOHvcr+gXDfp8dt3ufb8185
+z2i+aufTdb9PYHTO4/PNvdF8dV/2e/2a6Ez9+1I+2uswX7539J6l/BIurY/mj7+lLN2fl3WZ
+92f3bYJvm3W/5cPv/Cm/88X/6MX/dLwnAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADA
+zzCloubWXt58nt+0BdGpDDo1Tm9zj/U27yXUm1wknQqs0/1aDP1eRH0orN4ebNb1hdT1Oqnj
+fr7a5tNeTYH2aP1zJty3d/q7izq+Ol9t899wzna8XXffZfjep9O9wZn6de04vB587+F7Lq7P
+Bmtb6bm2lDwXmQel6vXbPnc4/ZZfnvXFdwvP3Nj2BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAA+DmmqBS9TXVYtxU/pzLpUhBd516UQucC6+d75tpWHRVKb4XTqXx6UJbenC+n7tvN
+v/ddl2ej56Ki7NG+Sf+O0Xs/Of9bzlnH2/UXytLTODpTtO60b3Mdra/vObz71f8/2DcZrS3D
+7PRc9z9sz5DWRfvkZ5r31jX98znBujLMoj3Lrert7U1ERERERERERERERERERERERERERERE
+REREREREREREREREREREREREREREREREREREREREREREREREROSP5jOmVNLc2oqbg/lNKX6+
+3+Zz8XlUCl3dl/yeS2Xp7b3RdVLHH83390fadf11Ldau4+i9X53v74+06/pn0v85upeum+8b
+lXNn/fv6cfVqXXSGaH1Ufv7Z+WS0tgyz03OlLP2e1l74tlX5HR/+j6O1VX8/jaM9yxAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAnmFLZc6sWQPcOc7nYeT6XP+fxY73N07ocWqqT
+VEydyqtLQXV+MF3vax+3eZ3KIF2Hpep9qXQdfzh/3Gvk6r75rIf3F6d9i8vzXzxnHu7/x+O9
+5t39OVqne4Mz9euacXyGwfeO3rP9Vi6szwZrW/1ztdC9m8/P5vHot9zYnh38j6p+7+GeAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0dYlh45laVvhedFW/6c77+Xrqcs965IOpVU
+5zLsp8PaMpfv78/X5HLwrmR6G3d7TvV87fp+TV9O/WrffLuZW5Z939F5RvPNu7/9nPle8226
+fbdv0O7Xi+5FZ+rX1fHoDPV6e0/0G0jpno3W9+dLorWt0z77mvDbphvdM6cy9PYs/fvbM7br
+iuGeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8SUipqvuLruW6Sy7a6V+nGbt9Ly
+3+bf2vezfso5/zZBYTkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/7u8sS4ffQVk6
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAN1rXfwDgpvvCb8f0LAAAAABJRU5ErkJg
+gg==</item>
+		<item item-id="2">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</item>
+		<item item-id="3">iVBORw0KGgoAAAANSUhEUgAAH0sAAAAMCAYAAAAXHXAzAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP4SURBVHhe7d2BbaMwFIBh5mIg5ugI
+TMMyGcbHM5ga1yT0pIuu1fdJv1qMiUkWeMMq3Q0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAACgGO4OQTcsHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKj93bD0x5zG9TrW
+To1zeuxbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgN9tiCHntfa6OK3HsPR2MHpv
+DQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPi1usPSewPTbw9Lz3+nNI3b50TTUu3Z
+14ZhStvykqb1epz3T8t7xpQvu/s3y1TW18q7lHfIO1blul0v6vXTWfv5X2zvWs7N36v3XHve
+q3Ou9rfry3T+rsfnrNX7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4A2GGLRdO4Zv
+d9YP7RDvUA/4roeNx4DvPOh8GzReBqc/5jENnxfrM7HnkeaxPPtkf72vfpf2vep3at83HOtx
+VjWMvbs/zqwGv2cXz7XPvzrnav9pffs9tqHozbu0zwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAMAbDL2h6HXFaV9vOHd3wHeIId9jmpdmPfZVg8PzMPT1jLFMWW8/57R//8y4We/L
+e87vn4eLd9bzoPHybO+5eqh5qM8pLp97MhS9t7+3XvbvZy5T/RveG5b+8fEhSZIkSZIkSZIk
+SZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkfavvGGIwd60e2F07XfeGc5e1
+L/fuDUtPy5TPuDUsvb539X8o16/W2/s9vT3Pntu/z9Gzc9r1cl3+rp+Vf5d6X/zffn5+GAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN5jiEHbtTJ8u3Vaa4d7h3bA976ch4bn6xia
+PqRpn47+mMc0lIt8Lwah74PV88PX++P/7lD19uyrd/qyfj6r75Hmsd1z57nVq3Oevd+6//id
+Tvuqz2qfBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgDfoDkvv+daw9BjwfRRD0Hen
+e2W9GSAew9XLvd7+fL+sfZaHp7fvdflO+0D2en+7p/1+odlzDCqv1i6fe3ZOfT+U67y3+f2O
+9eo3a58HAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACANxhiYPcdd/f988HdMSz9mBK+
+eczjNiwdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeJufNywdAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAA+A+k9Aeu2US8u5mAswAAAABJRU5ErkJggg==</item>
+		<item item-id="4">iVBORw0KGgoAAAANSUhEUgAAH0sAAAAMCAYAAAAXHXAzAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAWnSURBVHhe7d3bcds6FAVQ1cWCWIdL
+UDVqxsXwEhABHULgQ7LimZusNbMnAogXYeb7XGbT2QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAUl7NF0BVL/x/4vk7DcJ2+l+aTo+cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAADwgl8plv59HfL8kuGqXPcfoVg6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+v+jSFkFv28VW/5FcKH1VoPs2jQqm/xmKpQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+APCLusXSe4XR3yuWngqjD9NTXfRStDv9u+xXU/qHcRqHR/94C3Pr+PXat/ExflWgfWtOu3+Z
+0xufz9SsWc8a+m/j/jpRM/d+/nG+tdlq7k5fsup/pH9nzfPmDPX8bX9pb41Pv1f7HNxbmhfO
+krOMywX2a3/n3nbmbp4hjk3pjt/q793/kqN9P/gdd+8l7/EYU9ttf/w7AQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAfMglFV6OHsWYn/tf1hZsrlIR9XG67RV6jgWkc3HsVLB6mbd0
+r9f/nq5Dr4D0zpzu743xqzVn3f40txS43jvrIvSlAtm1kPayTmnnItmpMY+/ljF1bnrvTuHz
+emcHz2NfPP+qf1baW+Pz7xfubWk+tVvpnI+LWXua+8YZur+377+/zs6+H/uOG+Ve2jFx79p/
+fx/F0gEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgE+79IqixxTp99fX1+lkm8Wel2LR
+pwo9J2n8MF1vc39zvnvx6TAmTYrz0++tOe24sndvfK+/OettXM64t07aqwhjhlpRexbWzPK4
++9xcuDuuF56t58U7O3i+df72DE3/qfft9ffWXZpZO6d9XrRz986wtWfvd2/83jr5+Yl9V3+T
+zvg4Jk3q7Rfn5GdpfJk7i2da5q7+TvdRVe//roiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiI
+iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiI/Nt5xSUVXY5qIeZO/+tC4eeoU9A5
+2+ov62wUfM7inK3frdv4KMS9ufei7W/Hz2vlgudH60R1THq/yzSWitft3NSOBbGzpUh2fLaa
+F+7s6HnqOzp/23/2fbfWWZrddvxmttZNjtYq9sad+QZSu9x1b522v3jq/+F3vHUv6R3C/9v8
+PuV5+3fKkwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD7j0hZBLwWXW72+M76vw6MY
+dXYvDN4t4FzabX8taH2fW4uKB2mfvOa9Eebvz7mUB3XOxvi9s87jT68TxTXzOqUY9npuPeft
+WotlP84exsb1enfWe5737Zw/jk1if2/8q/e2NI/az99P0M594wxnvoE6ZnOdk/v+5Dtu1tq8
+lzIu/Tvv8fxuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn9Mtlt7zbrH0JBd2ToWb
+l9Qi0W0B57bQc8041brS7bM0PhWhjn1LVkWn47M6pxQnX8aUs/TGx+dJaeexzfn21smDFr01
+53H5flZzl/VX7xn27L5/eLe953mfzvlX+7d54X3j8+SoPbuNjzWGcXx6XnXmvnSG09/A8r5b
+65TfvX1jX3tv8Vk9T+hbUr7jU/dSzpTX3/g7AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAfMiqAvrlqymc/sP2214t7JyKTNcK7HepQHstlv6vOLq3nxbMVnD7Nb5jAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAADgL3cpBc4//e+PKMr9nj9dLJ3XuG8AAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAOCvNk3/AVGZHDnNqWaQAAAAAElFTkSuQmCC</item>
+		<item item-id="5">iVBORw0KGgoAAAANSUhEUgAAH0sAAAAMCAYAAAAXHXAzAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATDSURBVHhe7d3RkaM4FAVQ4iIg4ugQ
+iIZkHAyLQJIfsmwzvTM13t5zqm61JYQQdv/fYbNeDQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAEAxXC1BV5YOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARH+2LP02r+N2
+X7q3ZFryNX6O/DuP8y1PbNLcOK3TeP79S8Zp2q7Pa7gj39PMAQAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAA8LGGVFwdtePi2fxLbfm1MuyfqRajj2vtS3/32/f+F/x/AAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA/Kd0y9J7xei/pSx9mdZhWo7P6Vp+1jBMa57dLVOZ39IW
+bNd78rX2GWXczhdx/rRfKPouTtfzGZt9j7Nu105rc9K7Nuv376Ccr7d+c5vHMN8UkMf1r96j
+fW4Zp+fHPVLKeeL64tl8FPeOv2+87904ufIsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAPsaQyrKjWKIdteNLUvl12O9e/L2s0za+92qP95Lt9bbOY6/wO83f76nX2oLtZ/NFnU9n
+CCXtvfXb3Pzieako/eE8edhbX977Zcl7HlbPCsjr5yfv8W7/d+Pi2XwU1tTv5DvPu/IsAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPsbQK0WPKdLnr6+vy9k9K8juzdfC71T+/Ytl
+6c2Zaxl5M38q8e7dF0vHs73IPV4P941H8/vhYb/Hd1imbW559vxSJL9pr+X7417188M+Kedz
+1pR7k7hX0lnfLT3viWvK597+r8ZJb27T+/8SERERERERERERERERERERERERERERERERERER
+ERERERERERERERERERERERERERERERERERERERERERGRP5NfMaRS7CiWZUft+JKH8utUhJ6L
+vNvi7FJUHq9114VC73Stt+bKfHv9rfbsadwpb8/D46xh/TId5epl/Gp9W5xe1m17PBSnt/sU
+7fx3x+18T7MmFcxP88X983B35VkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB8jKFX
+it7OJb25t9ry61r2fS4aT+XaQx6kz3up+DFoyrPDfeVau+byfFN23rPMtbS8njHumz6XYvPe
+82r5+fad3l+2OUcW14f5/bl5HL+nus+z9+jt/53xaf62zuNw/32K9t58plrsnnTXhFL4zen9
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+HjdsvSeb5elp9LsmmmtVdina3k+lamf
+1h/Zy7nz+tqlXcq32xLuOH/ap1Nq3q45lXlvTufJZ+w9b7s+zS+e1773q/Ntluk+P07TsX4/
+SygXj+do9yr7t+d8N4579L6vTsH5rt0rqcX4WW9N+8z2OgAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAB/t1IA+fDXF6f9y/MtSwXZtQz/c5vEoS+fv6/w+AAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAA/H8NpeD8d//l50nF9brSAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAOKzrP+DdPuSFO6B4AAAAAElFTkSuQmCC</item>
+		<item item-id="6">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</item>
+	</binaryContent>
+</worksheet>
