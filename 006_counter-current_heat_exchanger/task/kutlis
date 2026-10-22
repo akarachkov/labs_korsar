@@ -1,5 +1,5 @@
  00001 FORMAT = 5;
- 00002 N1 = 10;
+ 00002 N1 = 40;
  00003 
  00004 BEGIN
  00005   OUT RESULT.DAT
@@ -26,7 +26,7 @@
  %inf- MAIN proc. Initial value of FORMAT is 10
   
  Usage of space: Variables (<korres>), Descriptors, Procedures
- Used   space:           0.12%            0.55%        0.87% 
+ Used   space:           0.46%            0.55%        0.87% 
   
   
  Used space for variables   0.00%

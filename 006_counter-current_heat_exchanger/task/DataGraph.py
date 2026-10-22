@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 # НАСТРОЙКА
 # ============================================================
 filepath = r"C:\Users\Toy_G\Desktop\ВУЗ\6 курс 1 семестр\Инновационные подходы в проектировании и конструировании реакторов АЭС\Лабораторная работа 1\labs_korsar-master\labs_korsar-master\006_counter-current_heat_exchanger\task\\result.dat"
-N1 = 10                # число ячеек по длине (как в kordat)
+N1 = 40                # число ячеек по длине (как в kordat)
 L_total = 3.0          # полная длина теплообменника, м (Lt из kordat)
 T0_C = 273.15          # смещение для перевода К -> °C
 

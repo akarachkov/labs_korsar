@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?validation-md5-digest 19dd4b538a1c54532692c253421dc8aa?>
+<?validation-md5-digest aff4e7b6661bdf595a1afc966b63ee37?>
 <worksheet version="3.0.3" xmlns="http://schemas.mathsoft.com/worksheet30" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ws="http://schemas.mathsoft.com/worksheet30" xmlns:ml="http://schemas.mathsoft.com/math30" xmlns:u="http://schemas.mathsoft.com/units10" xmlns:p="http://schemas.mathsoft.com/provenance10">
 	<pointReleaseData/>
 	<metadata>
@@ -13,9 +13,9 @@
 			<revisedBy>Toy_Ghost@outlook.com</revisedBy>
 		</userData>
 		<identityInfo>
-			<revision>57</revision>
+			<revision>59</revision>
 			<documentID>24B33792-9E56-44A7-9F85-5D80EF451AFB</documentID>
-			<versionID>9DF2A530-CF73-443E-991B-54B77924C08C</versionID>
+			<versionID>E4E746E4-4841-43A1-A3C2-F3E5048DDF3E</versionID>
 			<parentVersionID>00000000-0000-0000-0000-000000000000</parentVersionID>
 			<branchID>00000000-0000-0000-0000-000000000000</branchID>
 		</identityInfo>
@@ -118,7 +118,7 @@
 				</p>
 			</text>
 		</region>
-		<region region-id="3575" left="0" top="27" width="6008.25" align-x="0" align-y="27" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="128.25">
+		<region region-id="3588" left="0" top="27" width="6008.25" align-x="0" align-y="27" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="128.25">
 			<area is-collapsed="true" name="Исходные данные для теплового расчета" show-name="true" show-border="true" show-icon="true" show-timestamp="true" allow-expand="false" is-locked="false" timestamp="" top-lock-id="598" bottom-lock-id="3434">
 				<region region-id="3182" left="12" top="17.25" width="45.75" height="18.75" align-x="28.5" align-y="32.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 					<math optimize="false" disable-calc="false">
@@ -156,7 +156,7 @@
 					<math optimize="false" disable-calc="false">
 						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
 							<ml:id xml:space="preserve">t2c</ml:id>
-							<ml:real>53.904</ml:real>
+							<ml:real>53.938</ml:real>
 						</ml:define>
 					</math>
 				</region>
@@ -164,7 +164,7 @@
 					<math optimize="false" disable-calc="false">
 						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
 							<ml:id xml:space="preserve">t2h</ml:id>
-							<ml:real>61.219</ml:real>
+							<ml:real>61.185</ml:real>
 						</ml:define>
 					</math>
 				</region>
@@ -195,9 +195,9 @@
 			</area>
 			<rendering item-idref="1"/>
 		</region>
-		<region region-id="3546" left="0" top="57.75" width="6008.25" align-x="0" align-y="57.75" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="68.25">
+		<region region-id="3589" left="0" top="57" width="6008.25" align-x="0" align-y="57" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="68.25">
 			<area is-collapsed="true" name="Исходные данные для труб (диаметры)" show-name="true" show-border="true" show-icon="true" show-timestamp="true" allow-expand="false" is-locked="false" timestamp="" top-lock-id="1988" bottom-lock-id="3221">
-				<region region-id="3225" left="12" top="15" width="45.75" height="12.75" align-x="29.25" align-y="24" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+				<region region-id="3225" left="12" top="17.25" width="45.75" height="12.75" align-x="29.25" align-y="26.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 					<math optimize="false" disable-calc="false">
 						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
 							<ml:id xml:space="preserve">dн</ml:id>
@@ -205,7 +205,7 @@
 						</ml:define>
 					</math>
 				</region>
-				<region region-id="3235" left="120" top="15" width="38.25" height="12.75" align-x="141" align-y="24" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+				<region region-id="3235" left="120" top="17.25" width="38.25" height="12.75" align-x="141" align-y="26.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 					<math optimize="false" disable-calc="false">
 						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
 							<ml:id xml:space="preserve">nтр</ml:id>
@@ -218,7 +218,7 @@
 						</resultFormat>
 					</math>
 				</region>
-				<region region-id="3412" left="228" top="15" width="30.75" height="12.75" align-x="246" align-y="24" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+				<region region-id="3412" left="228" top="17.25" width="30.75" height="12.75" align-x="246" align-y="26.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 					<math optimize="false" disable-calc="false">
 						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
 							<ml:id xml:space="preserve">lтр</ml:id>
@@ -226,7 +226,7 @@
 						</ml:define>
 					</math>
 				</region>
-				<region region-id="3226" left="12" top="33" width="45.75" height="12.75" align-x="33.75" align-y="42" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+				<region region-id="3226" left="12" top="35.25" width="45.75" height="12.75" align-x="33.75" align-y="44.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 					<math optimize="false" disable-calc="false">
 						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
 							<ml:id xml:space="preserve">dвн</ml:id>
@@ -234,7 +234,7 @@
 						</ml:define>
 					</math>
 				</region>
-				<region region-id="3236" left="120" top="33" width="40.5" height="12.75" align-x="136.5" align-y="42" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+				<region region-id="3236" left="120" top="35.25" width="40.5" height="12.75" align-x="136.5" align-y="44.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 					<math optimize="false" disable-calc="false">
 						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
 							<ml:id xml:space="preserve">ds</ml:id>
@@ -245,7 +245,7 @@
 			</area>
 			<rendering item-idref="2"/>
 		</region>
-		<region region-id="3523" left="0" top="87.75" width="6008.25" align-x="0" align-y="87.75" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="206.25">
+		<region region-id="3523" left="0" top="85.5" width="6008.25" align-x="0" align-y="85.5" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="206.25">
 			<area is-collapsed="true" name="Проходные сечения" show-name="true" show-border="true" show-icon="true" show-timestamp="true" allow-expand="false" is-locked="false" timestamp="" top-lock-id="3222" bottom-lock-id="3349">
 				<region region-id="3511" left="12" top="8.25" width="143.25" height="33.75" align-x="27" align-y="30" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 					<math optimize="false" disable-calc="false">
@@ -397,7 +397,7 @@
 			</area>
 			<rendering item-idref="3"/>
 		</region>
-		<region region-id="3580" left="0" top="135" width="6008.25" align-x="0" align-y="135" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="650.25">
+		<region region-id="3594" left="0" top="135" width="6008.25" align-x="0" align-y="135" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="650.25">
 			<area is-collapsed="true" name="Определение коэффициента теплопередачи" show-name="true" show-border="true" show-icon="true" show-timestamp="true" allow-expand="false" is-locked="false" timestamp="" top-lock-id="1002" bottom-lock-id="3425">
 				<region region-id="3399" left="12" top="16.5" width="115.5" height="27.75" align-x="34.5" align-y="32.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 					<math optimize="false" disable-calc="false">
@@ -414,7 +414,7 @@
 									<ml:real>2</ml:real>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>78.1095</ml:real>
+									<ml:real>78.0925</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -435,7 +435,7 @@
 									<ml:real>2</ml:real>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>36.952</ml:real>
+									<ml:real>36.969</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -466,7 +466,7 @@
 					<math optimize="false" disable-calc="false">
 						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
 							<ml:id xml:space="preserve">λст</ml:id>
-							<ml:real>42</ml:real>
+							<ml:real>44</ml:real>
 						</ml:define>
 					</math>
 				</region>
@@ -527,7 +527,7 @@
 									</ml:apply>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>972.97206282402453</ml:real>
+									<ml:real>972.98249877010733</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -554,7 +554,7 @@
 									</ml:apply>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>993.35271673107809</ml:real>
+									<ml:real>993.34661740024171</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -685,7 +685,7 @@
 									</ml:sequence>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>4193.9560585109257</ml:real>
+									<ml:real>4193.9423463530629</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -696,7 +696,7 @@
 						</resultFormat>
 					</math>
 				</region>
-				<region region-id="3479" left="228" top="173.25" width="186.75" height="12.75" align-x="249" align-y="182.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+				<region region-id="3479" left="228" top="173.25" width="191.25" height="12.75" align-x="249" align-y="182.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 					<math optimize="false" disable-calc="false">
 						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
 							<ml:id xml:space="preserve">cpc</ml:id>
@@ -713,7 +713,7 @@
 									</ml:sequence>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>4178.720331448204</ml:real>
+									<ml:real>4178.7187648103763</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -739,13 +739,13 @@
 									</ml:apply>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>0.65430426698975308</ml:real>
+									<ml:real>0.654297249099852</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
 					</math>
 				</region>
-				<region region-id="3466" left="12" top="232.5" width="130.5" height="27.75" align-x="33.75" align-y="248.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+				<region region-id="3466" left="12" top="232.5" width="126" height="27.75" align-x="33.75" align-y="248.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 					<math optimize="false" disable-calc="false">
 						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
 							<ml:id xml:space="preserve">Re1</ml:id>
@@ -760,7 +760,7 @@
 									<ml:id xml:space="preserve">ν1</ml:id>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>17542.563155577907</ml:real>
+									<ml:real>17538.771980383881</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -808,7 +808,7 @@
 									</ml:apply>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>68.870532042926726</ml:real>
+									<ml:real>68.8694242301251</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -817,6 +817,29 @@
 							<matrix display-style="auto" expand-nested-arrays="false"/>
 							<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
 						</resultFormat>
+					</math>
+				</region>
+				<region region-id="3590" left="288" top="290.25" width="223.5" height="12.75" align-x="314.25" align-y="299.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define warning="WarnRedefinedUDScalar" xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Pr1ж</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:id xml:space="preserve">wspPRANDTLEPT</ml:id>
+									<ml:sequence>
+										<ml:id xml:space="preserve">P0</ml:id>
+										<ml:apply>
+											<ml:plus/>
+											<ml:id xml:space="preserve">Tср</ml:id>
+											<ml:real>273.15</ml:real>
+										</ml:apply>
+									</ml:sequence>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>2.2868173359143413</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
 					</math>
 				</region>
 				<region region-id="3468" left="12" top="292.5" width="111" height="27.75" align-x="29.25" align-y="308.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
@@ -834,7 +857,7 @@
 									<ml:id xml:space="preserve">dг1</ml:id>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>4584.7226722352634</ml:real>
+									<ml:real>4584.5675208199445</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -860,13 +883,13 @@
 									</ml:apply>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>0.364136296868086</ml:real>
+									<ml:real>0.36413853273188745</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
 					</math>
 				</region>
-				<region region-id="3470" left="12" top="370.5" width="126" height="27.75" align-x="33.75" align-y="386.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+				<region region-id="3470" left="12" top="370.5" width="121.5" height="27.75" align-x="33.75" align-y="386.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 					<math optimize="false" disable-calc="false">
 						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
 							<ml:id xml:space="preserve">Re2</ml:id>
@@ -881,7 +904,7 @@
 									<ml:id xml:space="preserve">ν2</ml:id>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>5748.4464024049012</ml:real>
+									<ml:real>5750.3496903323348</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -890,6 +913,29 @@
 							<matrix display-style="auto" expand-nested-arrays="false"/>
 							<unit format-units="true" simplify-units="true" fractional-unit-exponent="false"/>
 						</resultFormat>
+					</math>
+				</region>
+				<region region-id="3592" left="288" top="392.25" width="220.5" height="12.75" align-x="314.25" align-y="401.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define warning="WarnRedefinedUDScalar" xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">Pr2ж</ml:id>
+							<ml:eval placeholderMultiplicationStyle="default">
+								<ml:apply>
+									<ml:id xml:space="preserve">wspPRANDTLEPT</ml:id>
+									<ml:sequence>
+										<ml:id xml:space="preserve">P0</ml:id>
+										<ml:apply>
+											<ml:plus/>
+											<ml:id xml:space="preserve">tср</ml:id>
+											<ml:real>273.15</ml:real>
+										</ml:apply>
+									</ml:sequence>
+								</ml:apply>
+								<result xmlns="http://schemas.mathsoft.com/math30">
+									<ml:real>4.6286437588318856</ml:real>
+								</result>
+							</ml:eval>
+						</ml:define>
 					</math>
 				</region>
 				<region region-id="3471" left="12" top="400.5" width="210" height="33.75" align-x="36" align-y="422.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
@@ -929,7 +975,7 @@
 									</ml:apply>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>47.681215167466256</ml:real>
+									<ml:real>47.682453169865461</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -950,7 +996,7 @@
 									<ml:id xml:space="preserve">dг2</ml:id>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>2707.6606514553487</ml:real>
+									<ml:real>2707.8286364414685</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -988,7 +1034,7 @@
 									</ml:apply>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>0.00011571397331964103</ml:real>
+									<ml:real>0.00011571788932407352</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1021,7 +1067,7 @@
 									</ml:apply>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>0.0001632763928177372</ml:real>
+									<ml:real>0.0001632662636750684</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1061,13 +1107,13 @@
 									</ml:apply>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>1.1514832141256987E-05</ml:real>
+									<ml:real>1.0991430680290761E-05</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
 					</math>
 				</region>
-				<region region-id="3460" left="12" top="563.25" width="174" height="18.75" align-x="48" align-y="578.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+				<region region-id="3460" left="12" top="563.25" width="165" height="18.75" align-x="48" align-y="578.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 					<math optimize="false" disable-calc="false">
 						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
 							<ml:id xml:space="preserve">Rсумм</ml:id>
@@ -1082,7 +1128,7 @@
 									<ml:id xml:space="preserve">Rст</ml:id>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>0.00029050519827863525</ml:real>
+									<ml:real>0.00028997558367943268</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1099,7 +1145,7 @@
 									<ml:id xml:space="preserve">Rсумм</ml:id>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>3442.2791947456294</ml:real>
+									<ml:real>3448.5662113728085</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1108,9 +1154,9 @@
 			</area>
 			<rendering item-idref="4"/>
 		</region>
-		<region region-id="3579" left="0" top="174.75" width="6008.25" align-x="0" align-y="174.75" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="248.25">
+		<region region-id="3595" left="0" top="171" width="6008.25" align-x="0" align-y="171" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="248.25">
 			<area is-collapsed="true" name="Водяные эквиваленты, NTU" show-name="true" show-border="true" show-icon="true" show-timestamp="true" allow-expand="false" is-locked="false" timestamp="" top-lock-id="3441" bottom-lock-id="3538">
-				<region region-id="3494" left="12" top="11.25" width="100.5" height="12.75" align-x="29.25" align-y="20.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+				<region region-id="3494" left="12" top="11.25" width="105" height="12.75" align-x="29.25" align-y="20.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 					<math optimize="false" disable-calc="false">
 						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
 							<ml:id xml:space="preserve">Cc</ml:id>
@@ -1121,7 +1167,7 @@
 									<ml:id xml:space="preserve">cpc</ml:id>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>4178.720331448204</ml:real>
+									<ml:real>4178.7187648103763</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1143,7 +1189,7 @@
 									<ml:id xml:space="preserve">cph</ml:id>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>4193.9560585109257</ml:real>
+									<ml:real>4193.9423463530629</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1167,7 +1213,7 @@
 									</ml:sequence>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>4178.720331448204</ml:real>
+									<ml:real>4178.7187648103763</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1186,7 +1232,7 @@
 									</ml:sequence>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>4193.9560585109257</ml:real>
+									<ml:real>4193.9423463530629</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1203,7 +1249,7 @@
 									<ml:id xml:space="preserve">Cmax</ml:id>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>0.99636721824211694</ml:real>
+									<ml:real>0.996370102332016</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1220,7 +1266,7 @@
 									<ml:id xml:space="preserve">Cmin</ml:id>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>0.82376395683619519</ml:real>
+									<ml:real>0.8252687977984321</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1283,7 +1329,7 @@
 									</ml:apply>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>0.45205412396003114</ml:real>
+									<ml:real>0.452506630350498</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1292,7 +1338,7 @@
 			</area>
 			<rendering item-idref="5"/>
 		</region>
-		<region region-id="3578" left="0" top="203.25" width="6008.25" align-x="0" align-y="203.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="333.75">
+		<region region-id="3596" left="0" top="189" width="6008.25" align-x="0" align-y="189" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="338.25">
 			<area is-collapsed="true" name="Тепловая мощность и конечные температуры" show-name="true" show-border="true" show-icon="true" show-timestamp="true" allow-expand="false" is-locked="false" timestamp="" top-lock-id="3564" bottom-lock-id="3576">
 				<region region-id="3543" left="12" top="23.25" width="159.75" height="12.75" align-x="25.5" align-y="32.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 					<math optimize="false" disable-calc="false">
@@ -1315,7 +1361,7 @@
 									</ml:parens>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>141675.58190300915</ml:real>
+									<ml:real>141817.34605850538</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1341,7 +1387,7 @@
 									</ml:apply>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>61.219106751130006</ml:real>
+									<ml:real>61.185194180881894</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1362,7 +1408,7 @@
 									</ml:apply>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>53.904059297002334</ml:real>
+									<ml:real>53.937997276287348</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1379,7 +1425,7 @@
 									<ml:id xml:space="preserve">t2h</ml:id>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>33.780893248869994</ml:real>
+									<ml:real>33.814805819118106</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1396,7 +1442,7 @@
 									<ml:id xml:space="preserve">t1c</ml:id>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>33.904059297002334</ml:real>
+									<ml:real>33.937997276287348</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1415,7 +1461,7 @@
 									</ml:sequence>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>33.780893248869994</ml:real>
+									<ml:real>33.814805819118106</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1434,7 +1480,7 @@
 									</ml:sequence>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>33.904059297002334</ml:real>
+									<ml:real>33.937997276287348</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
@@ -1462,13 +1508,13 @@
 									</ml:apply>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>33.842438918773304</ml:real>
+									<ml:real>33.876364215547717</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
 					</math>
 				</region>
-				<region region-id="3573" left="12" top="301.5" width="124.5" height="12.75" align-x="35.25" align-y="310.5" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+				<region region-id="3573" left="12" top="305.25" width="124.5" height="12.75" align-x="35.25" align-y="314.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 					<math optimize="false" disable-calc="false">
 						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
 							<ml:id xml:space="preserve">Qalt</ml:id>
@@ -1479,7 +1525,7 @@
 									<ml:id xml:space="preserve">ΔTlg</ml:id>
 								</ml:apply>
 								<result xmlns="http://schemas.mathsoft.com/math30">
-									<ml:real>116495.12338954312</ml:real>
+									<ml:real>116824.88499789678</ml:real>
 								</result>
 							</ml:eval>
 						</ml:define>
