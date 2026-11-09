@@ -246,8 +246,9 @@
  00180 OUTPUT _Out              ! Вывод параметров
  00181   WRITE T.CH1(1,1:N1), T.CH2(1,1:N1),
  00182   TW.HCS1(1,1:N1), TW.HCS1(2,1:N1),
- 00183   ALW.HCS1(1,1:N1), ALW.HCS1(2,1:N1);
- 00184 END
+ 00183   ALW.HCS1(1,1:N1), ALW.HCS1(2,1:N1),
+ 00184   EH.CH1(1,1:N1), EH.CH2(1,1:N1);
+ 00185 END
   
  %inf- DATA CH1 Default value of ROU.CH1 = 1.000000000E-06
  %inf- DATA CH1 Default value of XB.CH1 = 0.000000000E+00
@@ -310,7 +311,7 @@
   
  %inf- List of parameters that will be written into <korres>
  T.CH1(1,1:40) T.CH2(1,1:40) TW.HCS1(1,1:40) TW.HCS1(2,1:40) ALW.HCS1(1,1:40)
- ALW.HCS1(2,1:40)
+ ALW.HCS1(2,1:40) EH.CH1(1,1:40) EH.CH2(1,1:40)
   
  %inf- NGAS = "H2O"
   
@@ -319,7 +320,7 @@
   
   
  Usage of space: Keys, Descriptors, Notkeys, Events, Output, Layout
- Used   space:   2.54%    2.90%     13.40%    0.90%   0.75%  35.79%
+ Used   space:   2.54%    2.90%     13.40%    0.90%   1.00%  35.79%
   
  %inf- Total number of elements in scheme is 9:
          CH         - 2 ( 80 volumes )

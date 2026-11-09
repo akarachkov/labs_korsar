@@ -48,7 +48,7 @@ def read_last(path, N):
             numbers.append(float(tok))
         except ValueError:
             continue
-    n_cols = 1 + 6 * N
+    n_cols = 1 + 8 * N
     n_steps = len(numbers) // n_cols
     if n_steps == 0:
         raise ValueError(f"Файл {path} пустой или формат не совпадает (N={N}).")
@@ -63,17 +63,25 @@ def parse_last(last, N):
     Tw_out  = last[1 + 3*N     : 1 + 4*N]     - T0_C
     ALW_in  = last[1 + 4*N     : 1 + 5*N]
     ALW_out = last[1 + 5*N     : 1 + 6*N]
-    return T_hot, T_cold, Tw_in, Tw_out, ALW_in, ALW_out
+    EH_hot  = last[1 + 6*N     : 1 + 7*N]
+    EH_cold = last[1 + 7*N     : 1 + 8*N] 
+    return T_hot, T_cold, Tw_in, Tw_out, ALW_in, ALW_out, EH_hot, EH_cold
 
 
-def compute_Q(T_hot, T_cold, N, G_hot, G_cold, cp):
+def compute_Q(T_hot, T_cold, EH_hot, EH_cold, N, G_hot, G_cold):
     """Тепловая мощность по последнему срезу с учётом направлений потоков."""
     T_h_in  = T_hot[N-1]
     T_h_out = T_hot[0]
     T_c_in  = T_cold[0]
     T_c_out = T_cold[N-1]
-    Q_hot  = G_hot  * cp * (T_h_in  - T_h_out)
-    Q_cold = G_cold * cp * (T_c_out - T_c_in)
+
+    h_h_in  = EH_hot[N-1]
+    h_h_out = EH_hot[0]
+    h_c_in  = EH_cold[0]
+    h_c_out = EH_cold[N-1]
+    
+    Q_hot  = G_hot  * (h_h_in  - h_h_out)
+    Q_cold = G_cold * (h_c_out - h_c_in)
     return {
         'T_h_in': T_h_in, 'T_h_out': T_h_out,
         'T_c_in': T_c_in, 'T_c_out': T_c_out,
@@ -111,8 +119,8 @@ def study_N():
     print("=== СХОДИМОСТЬ ПО ДЛИНЕ (N) ===")
     for N, path in files.items():
         last = read_last(path, N)
-        T_hot, T_cold, *_ = parse_last(last, N)
-        res = compute_Q(T_hot, T_cold, N, G_HOT, G_COLD, CP)
+        T_hot, T_cold, _, _, _, _, EH_hot, EH_cold = parse_last(last, N)
+        res = compute_Q(T_hot, T_cold, EH_hot, EH_cold, N, G_HOT, G_COLD)
         results_N[N] = res
         print(f"N={N:3d}  T_h.out={res['T_h_out']:8.4f} °C  "
               f"T_c.out={res['T_c_out']:8.4f} °C  "
@@ -176,8 +184,8 @@ def study_K(N_fix):
     print(f"\n=== СХОДИМОСТЬ ПО K при N={N_fix} ===")
     for K, path in files.items():
         last = read_last(path, N_fix)
-        T_hot, T_cold, *_ = parse_last(last, N_fix)
-        res = compute_Q(T_hot, T_cold, N_fix, G_HOT, G_COLD, CP)
+        T_hot, T_cold, _, _, _, _, EH_hot, EH_cold = parse_last(last, N_fix)
+        res = compute_Q(T_hot, T_cold, EH_hot, EH_cold, N_fix, G_HOT, G_COLD)
         results_K[K] = res
         print(f"K={K:3d}  T_h.out={res['T_h_out']:8.4f} °C  "
               f"T_c.out={res['T_c_out']:8.4f} °C  "

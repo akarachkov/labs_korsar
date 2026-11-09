@@ -180,5 +180,6 @@ END
 OUTPUT _Out              ! Вывод параметров
   WRITE T.CH1(1,1:N1), T.CH2(1,1:N1),
   TW.HCS1(1,1:N1), TW.HCS1(2,1:N1),
-  ALW.HCS1(1,1:N1), ALW.HCS1(2,1:N1);
+  ALW.HCS1(1,1:N1), ALW.HCS1(2,1:N1),
+  EH.CH1(1,1:N1), EH.CH2(1,1:N1); 
 END

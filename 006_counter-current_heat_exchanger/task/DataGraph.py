@@ -31,7 +31,7 @@ def load_data(filepath, n1):
         except ValueError:
             continue
 
-    n_per_row = 1 + 6 * n1
+    n_per_row = 1 + 8 * n1
     n_rows = len(numbers) // n_per_row
     if n_rows == 0:
         raise RuntimeError(
@@ -53,6 +53,8 @@ def load_data(filepath, n1):
     Tw_out  = data[:, 1 + 3 * N1  : 1 + 4 * N1]
     ALW_in  = data[:, 1 + 4 * N1  : 1 + 5 * N1]
     ALW_out = data[:, 1 + 5 * N1  : 1 + 6 * N1]
+    EH_hot  = data[:, 1 + 6 * N1  : 1 + 7 * N1]
+    EH_cold = data[:, 1 + 7 * N1  : 1 + 8 * N1] 
 
     return {
         'time': time,
@@ -62,6 +64,8 @@ def load_data(filepath, n1):
         'Tw_out': Tw_out,
         'ALW_in': ALW_in,
         'ALW_out': ALW_out,
+        'EH_hot': EH_hot,
+        'EH_cold': EH_cold, 
     }
 
 
@@ -165,20 +169,28 @@ def compute_performance(data, N1, G_hot, G_cold, cph, cpc):
     T_cold_in = data['T_cold'][idx, i_cold_in]
     T_cold_out= data['T_cold'][idx, i_cold_out]
 
-     # Тепловая мощность по горячему и холодному потокам
-    Q_hot  = G_hot  * cph * (T_hot_in  - T_hot_out)
-    Q_cold = G_cold * cpc * (T_cold_out - T_cold_in)
+    h_hot_in  = data['EH_hot'][idx, i_hot_in]
+    h_hot_out = data['EH_hot'][idx, i_hot_out]
+    h_cold_in = data['EH_cold'][idx, i_cold_in]
+    h_cold_out= data['EH_cold'][idx, i_cold_out]
 
-    # Среднее значение и относительная невязка баланса
-    Q = 0.5 * (Q_hot + Q_cold)
-    Q_balance_error = abs(Q_hot - Q_cold) / max(abs(Q), 1e-12)
+     # Тепловая мощность по горячему и холодному потокам
+    Q_hot_cp  = G_hot  * cph * (T_hot_in  - T_hot_out)
+    Q_cold_cp = G_cold * cpc * (T_cold_out - T_cold_in)
+
+    Q_hot_eh  = G_hot  * (h_hot_in  - h_hot_out)
+    Q_cold_eh = G_cold * (h_cold_out - h_cold_in)
 
     return {
         'time': data['time'][idx],
         'T_hot_in': T_hot_in, 'T_hot_out': T_hot_out,
         'T_cold_in': T_cold_in, 'T_cold_out': T_cold_out,
-        'Q': Q, 'Q_hot': Q_hot, 'Q_cold': Q_cold,
-        'Q_balance_error': Q_balance_error,
+        'h_hot_in': h_hot_in, 'h_hot_out': h_hot_out,
+        'h_cold_in': h_cold_in, 'h_cold_out': h_cold_out,
+        'Q_hot_cp': Q_hot_cp, 'Q_cold_cp': Q_cold_cp,
+        'Q_hot_eh': Q_hot_eh, 'Q_cold_eh': Q_cold_eh,
+        'Q_cp': 0.5 * (Q_hot_cp + Q_cold_cp),
+        'Q_eh': 0.5 * (Q_hot_eh + Q_cold_eh),
     }
 
 
@@ -227,10 +239,15 @@ def main():
     print(f"  Выход горячего:  {perf['T_hot_out'] - T0_C:.3f} °C")
     print(f"  Вход холодного:  {perf['T_cold_in'] - T0_C:.3f} °C")
     print(f"  Выход холодного: {perf['T_cold_out']- T0_C:.3f} °C")
-    print(f"  Q (по горячему): {perf['Q_hot']:.3f} Вт")
-    print(f"  Q (по холодному):{perf['Q_cold']:.3f} Вт")
-    print(f"  Q (среднее):     {perf['Q']:.3f} Вт")
-    print(f"  Невязка баланса: {perf['Q_balance_error']*100:.4f} %")
+    print("-" * 60)
+    print("  --- Через cp ---")
+    print(f"  Q (по горячему): {perf['Q_hot_cp']:.1f} Вт")
+    print(f"  Q (по холодному):{perf['Q_cold_cp']:.1f} Вт")
+    print(f"  Q (среднее):     {perf['Q_cp']:.1f} Вт")
+    print("  --- Через энтальпии ---")
+    print(f"  Q (по горячему): {perf['Q_hot_eh']:.1f} Вт")
+    print(f"  Q (по холодному):{perf['Q_cold_eh']:.1f} Вт")
+    print(f"  Q (среднее):     {perf['Q_eh']:.1f} Вт")
 
     # ---- Сохранение в Q.txt ----
     ntu_path = os.path.join(results_dir, 'Q.txt')
@@ -245,10 +262,14 @@ def main():
         f.write(f"Вход холодного:  {perf['T_cold_in'] - T0_C:.3f} °C\n")
         f.write(f"Выход холодного: {perf['T_cold_out']- T0_C:.3f} °C\n")
         f.write("-" * 60 + "\n")
-        f.write(f"Q (по горячему): {perf['Q_hot']:.3f} Вт\n")
-        f.write(f"Q (по холодному):{perf['Q_cold']:.3f} Вт\n")
-        f.write(f"Q (среднее):     {perf['Q']:.3f} Вт\n")
-        f.write(f"Невязка баланса: {perf['Q_balance_error']*100:.4f} %\n")
+        f.write("--- Через cp ---\n")
+        f.write(f"Q (по горячему): {perf['Q_hot_cp']:.1f} Вт\n")
+        f.write(f"Q (по холодному):{perf['Q_cold_cp']:.1f} Вт\n")
+        f.write(f"Q (среднее):     {perf['Q_cp']:.1f} Вт\n")
+        f.write("--- Через энтальпии ---\n")
+        f.write(f"Q (по горячему): {perf['Q_hot_eh']:.1f} Вт\n")
+        f.write(f"Q (по холодному):{perf['Q_cold_eh']:.1f} Вт\n")
+        f.write(f"Q (среднее):     {perf['Q_eh']:.1f} Вт\n")
 
     print("\nГотово. Все результаты в папке:")
     print(f"  {results_dir}")
